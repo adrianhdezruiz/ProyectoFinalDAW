@@ -19,7 +19,7 @@
   <div class="form-group p-2">
     <label class="mb-3"><b>EMAIL</b></label>
     <input type="email" class="form-control p-2" id="email" aria-describedby="emailHelp" placeholder="Introduce tu email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie mas.</small>
   </div>
   <!--Contraseña-->
   <div class="form-group mb-3 p-2">
@@ -29,7 +29,7 @@
   <!--Boton-->
   <div class="form-group mb-3 p-2">
   <button type="submit" class="btn btn-dark mb-3 w-100"><b class="text-success">Iniciar sesión</b></button>
-  <p>¿No tienes cuenta? Registrate <span><a href="#">aqui</a></span></p>
+  <p>¿No tienes cuenta? Registrate <span><a href="vistas/registro.php">aqui</a></span></p>
   </div>
 </form>
     </div>
