@@ -29,7 +29,7 @@
   <!--Boton-->
   <div class="form-group mb-3 p-2">
   <button type="submit" class="btn btn-dark mb-3 w-100"><b class="text-success">Iniciar sesión</b></button>
-  <p>¿No tienes cuenta? Registrate <span><a href="#">aqui</a></span></p>
+  <p>¿No tienes cuent? Registrate <span><a href="#">aqui</a></span></p>
   </div>
 </form>
     </div>
