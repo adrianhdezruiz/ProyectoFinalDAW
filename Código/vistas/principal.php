@@ -17,7 +17,7 @@
 
         <!--Nav-->
         <nav class="row  mb-3 w-75" style="margin: auto;">
-        <div class="col-3  p-3 mb-1  d-flex justify-content-center">
+        <div class="col-12 col-lg-3 col-md-12 col-sm-12 p-3 mb-1  d-flex justify-content-center">
                 <select class="form-select" aria-label="Default select example" style="width:17rem; border: none;">
                     <option selected>Open this select menu</option>
                     <option value="1">One</option>
@@ -25,19 +25,17 @@
                 <input type="submit" class="form-control ms-1 bg-dark text-success" style="width:6rem; border: none;" value="Buscar">
             </div>
 
-            <div class="col-6 p-3 mb-1 d-flex justify-content-center ">
-                <ul class="pagination pagination-lg text-dark" >
+            <div class="col-12 col-lg-6 col-md-12 col-sm-12 p-3 mb-1 d-flex justify-content-center ">
+                <ul class="pagination  text-dark" >
                     <li class="page-item"><a class="page-link text-success bg-dark" href="#">Anterior</a></li>
                     <li class="page-item"><a class="page-link text-dark" href="#">1</a></li>
                     <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
                     <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
                     <li class="page-item"><a class="page-link text-success bg-dark" href="#">Siguiente</a></li>
                 </ul>
             </div>
          
-
-            <div class="col-3 p-3 mb-1  d-flex justify-content-center">
+            <div class="col-12 col-lg-3 col-md-12 col-sm-12 p-3 mb-1  d-flex justify-content-center">
                 <input type="text" class="form-control me-5" style="width:24rem;" placeholder="Introduce un modelo...">
 
             </div>
