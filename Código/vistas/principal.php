@@ -52,7 +52,7 @@
                     <div class="card-body">
                         
                         <h5 class="card-title text-dark mb-3">XIAOMI</h5>
-                        <a href="#" class="btn btn-dark w-100">Alquilar</a>
+                        <a href="producto.php" class="btn btn-dark w-100">Alquilar</a>
                     </div>
                 </div>
                 </div>
