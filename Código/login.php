@@ -30,7 +30,7 @@
   <!--Boton-->
   <div class="form-group mb-3 p-2">
   <button type="submit" class="btn btn-dark mb-3 w-100"><b class="text-success">Iniciar sesión</b></button>
-  <p>¿No tienes cuenta? Registrate <span><a href="vistas/registro.php">aqui</a></span></p>
+  <p>¿No tienes cuenta? Registrate <a href="vistas/registro.php">aqui</a></p>
   </div>
 </form>
     </div>
