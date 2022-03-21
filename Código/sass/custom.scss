@@ -3,11 +3,20 @@
 
 // Include any default variable overrides here (though functions won't be available)
 
+$success :#C3D9C6;
+$dark:#000000;
+
 
 *{
     box-sizing: border-box;
     font-family: 'Segoe UI';
+    border: none;
 }
 
-$success :#C3D9C6;
+#logo_header{
+  height: 15%;
+  width: 15%;
+}
+
+
 @import "../node_modules/bootstrap/scss/bootstrap";

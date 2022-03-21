@@ -9,6 +9,7 @@
 </head>
 <body>
   <div class="container-fluid border d-flex justify-content-center align-items-center vh-100 bg-success">
+  
   <form class="border w-25  bg-light text-center">
 
   <!-- Cabecera login-->
