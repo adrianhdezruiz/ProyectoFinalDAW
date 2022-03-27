@@ -37,7 +37,7 @@
 
                         <!--Solo usuarios registrados-->
                         <li class="nav-item">
-                            <a class="nav-link" href="tickets_usuario.php">Ver mis tickets |</a>
+                            <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
                         </li>
 
                         <!--Solo usuarios registrados-->
@@ -45,11 +45,10 @@
                             <a class="nav-link" href="login.php">Cerrar sesión</a>
                         </li>
 
-                        <!----------------Administración-------------------
+                        <!----------------Administración------------------->
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Panel administrador</a>
+                            <a class="nav-link" href="admin/admin_index.php">| Administración</a>
                         </li>
-                        ---------------------------------------------------->
 
                     </ul>
                 </div>
@@ -57,7 +56,7 @@
         </header>
 
         <!--Nav-->
-        <nav class="row  mb-3 w-75" style="margin: auto;">
+        <nav class="row  mb-3 w-75 mt-3" style="margin: auto;">
             <div class="col-12 col-lg-3 col-md-12 col-sm-12 p-3 mb-1  d-flex justify-content-center">
                 <select class="form-select" aria-label="Default select example" style="width:17rem; border: none;">
                     <option selected>Open this select menu</option>
@@ -76,9 +75,11 @@
                 </ul>
             </div>
 
-            <div class="col-12 col-lg-3 col-md-12 col-sm-12 p-3 mb-1  d-flex justify-content-center">
-                <input type="text" class="form-control me-5" style="width:24rem;" placeholder="Introduce un modelo...">
-
+            <div class="col-12 col-lg-3 col-md-12 col-sm-12 p-3 mb-1   d-flex justify-content-center">
+                <input type="text" class="form-control me-0" style="width:17rem; position:relative; right:7%" placeholder="Introduce un modelo...">
+                <button class="form-control ms-1 bg-dark text-success" style="width:6rem; border: none;position:relative; right:7%">
+                    <img src="https://www.iconsdb.com/icons/preview/white/magnifying-glass-3-xxl.png" alt="">
+                </button>
             </div>
         </nav>
 

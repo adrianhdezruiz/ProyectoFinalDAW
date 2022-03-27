@@ -35,7 +35,7 @@
 
                     <!--Solo usuarios registrados-->
                     <li class="nav-item">
-                        <a class="nav-link" href="tickets_usuario.php">Ver mis tickets |</a>
+                        <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
                     </li>
 
                     <!--Solo usuarios registrados-->
@@ -43,16 +43,35 @@
                         <a class="nav-link" href="login.php">Cerrar sesión</a>
                     </li>
 
-                    <!----------------Administración-------------------
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php">Panel administrador</a>
-                        </li>
-                        ---------------------------------------------------->
+                    <!----------------Administración------------------->
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin/admin_index.php">| Administración</a>
+                    </li>
 
                 </ul>
             </div>
         </nav>
     </header>
+
+    <main class="row w-50 fs-4 " style="margin: auto;position:absolute; top:30%; left:25%">
+
+        <ul class="list-group mb-5 ">
+            <li class="list-group-item bg-dark text-success text-center">DETALLES TICKET</li>
+            <li class="list-group-item p-3 border border-0">ID TICKET:</li>
+            <li class="list-group-item bg-secondary p-3 border border-0">NOMBRE:</li>
+            <li class="list-group-item p-3 border border-0">FECHA:</li>
+            <li class="list-group-item bg-secondary p-3 border border-0">HORA INICIO:</li>
+            <li class="list-group-item p-3 border border-0">HORA FIN:</li>
+            <li class="list-group-item bg-secondary p-3 border border-0">MARCA: </li>
+            <li class="list-group-item p-3 border border-0">MODELO: </li>
+            <li class="list-group-item bg-secondary p-3 border border-0">PRECIO FINAL: </li>
+            <li class=" list-group-item d-flex justify-content-center align-items-vertical p-3 border border-0">
+
+                <input type="button" class="btn btn-primary rounded rounded-pill fs-4" value="Pagar con PayPal">
+            </li>
+        </ul>
+
+    </main>
 
 </body>
 

@@ -35,7 +35,7 @@
 
                     <!--Solo usuarios registrados-->
                     <li class="nav-item">
-                        <a class="nav-link" href="tickets_usuario.php">Ver mis tickets |</a>
+                        <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
                     </li>
 
                     <!--Solo usuarios registrados-->
@@ -43,11 +43,11 @@
                         <a class="nav-link" href="login.php">Cerrar sesión</a>
                     </li>
 
-                    <!----------------Administración-------------------
-          <li class="nav-item">
-            <a class="nav-link" href="login.php">Panel administrador</a>
-          </li>
-          ---------------------------------------------------->
+                    <!----------------Administración------------------->
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin/admin_index.php">| Administración</a>
+                    </li>
+
 
                 </ul>
             </div>

@@ -36,7 +36,7 @@
 
                         <!--Solo usuarios registrados-->
                         <li class="nav-item">
-                            <a class="nav-link" href="tickets_usuario.php">Ver mis tickets |</a>
+                            <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
                         </li>
 
                         <!--Solo usuarios registrados-->
@@ -44,11 +44,11 @@
                             <a class="nav-link" href="login.php">Cerrar sesión</a>
                         </li>
 
-                        <!----------------Administración-------------------
+                        <!----------------Administración------------------->
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Panel administrador</a>
+                            <a class="nav-link" href="admin/admin_index.php">| Administracion</a>
                         </li>
-                        ---------------------------------------------------->
+
 
                     </ul>
                 </div>
@@ -59,15 +59,15 @@
         <main class="row w-75 mt-5 mb-5 border border-5 " style="margin: auto; ">
 
             <!--Main Izqda -->
-            <div class="col-12 col-lg-4 col-md-12 bg-dark text-success d-flex justify-content-center p-3 ">
-                <div class="card" style="width: 35em;">
+            <div class="col-12 col-lg-5 col-md-12 col-sm-12 bg-dark text-success d-flex justify-content-center p-3 ">
+                <div class="card" style="width: 45em;">
                     <img class="card-img-top" id="img" src="../../Imagenes/567213_00_1.jpg" style="height: 100%;" data-zoom-image="../../Imagenes/567213_00_1.jpg">
 
                 </div>
             </div>
 
             <!--Main Derecha-->
-            <div class="col-12 col-lg-8  col-md-12 bg-ligth  bg-light text-center">
+            <div class="col-12 col-lg-7  col-md-12 col-sm-12 bg-ligth  bg-light text-center">
                 <!--Header-->
                 <div class="row bg-dark ">
                     <h1 class="text-success">MODELO</h1>
@@ -79,7 +79,7 @@
 
                         <h2 class="fw-bolder ">Descripcion</h2>
                         <hr>
-                        <p class="blockquote fs-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores vero culpa perferendis possimus obcaecati quasi ratione harum optio error, explicabo molestias dolor. Commodi nemo quibusdam ipsum voluptates consectetur pariatur temporibus.ç
+                        <p class="blockquote fs-4 mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores vero culpa perferendis possimus obcaecati quasi ratione harum optio error, explicabo molestias dolor. Commodi nemo quibusdam ipsum voluptates consectetur pariatur temporibus.ç
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt earum soluta sit suscipit nulla vero maiores deleniti veniam sunt facere quos voluptatum aut reiciendis sapiente error, exercitationem harum odit. Fugit.
                         </p>
                         <hr>
