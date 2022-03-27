@@ -106,8 +106,8 @@
                                     </div>
                                 </div>
 
-                                <div class="col-6 >
-                        
+                                <div class="col-6">
+
                                     <label for=" exampleInputEmail1" class="form-label">Hora fin</label>
                                     <input type="time" class="form-control text-center w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 </div>
