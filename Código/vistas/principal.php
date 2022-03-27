@@ -76,9 +76,9 @@
             </div>
 
             <div class="col-12 col-lg-3 col-md-12 col-sm-12 p-3 mb-1   d-flex justify-content-center">
-                <input type="text" class="form-control me-0" style="width:17rem; position:relative; right:7%" placeholder="Introduce un modelo...">
+                <input type="text" class="form-control me-0" style="width:17rem; position:relative; right:7%" placeholder="Busca un modelo...">
                 <button class="form-control ms-1 bg-dark text-success" style="width:6rem; border: none;position:relative; right:7%">
-                    <img src="https://www.iconsdb.com/icons/preview/white/magnifying-glass-3-xxl.png" alt="">
+                    <img src="../../Imagenes/lupa_buscador.png" alt="" style="width: 40%;height:55%">
                 </button>
             </div>
         </nav>
