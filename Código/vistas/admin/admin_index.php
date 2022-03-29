@@ -55,7 +55,7 @@
     <main class="row  w-50 text-success fs-3 " style="margin: auto; position:absolute; top:30%;left:25%">
         <h1 class="text-success text-center fw-bold">PANEL DE ADMINISTRACION</h1>
         <div class="col-12 mt-3">
-            <button class="w-100 bg-success p-4 m-3 fw-bold d-flex align-items-center text-center rounded-3" onclick="location.href=''" style="height: 10rem;">
+            <button class="w-100 bg-success p-4 m-3 fw-bold d-flex align-items-center text-center rounded-3" onclick="location.href='admin_user.php'" style="height: 10rem;">
                 <img src="../../../Imagenes/icono2-modified.png" class="img-fluid me-3 ">
                 USUARIOS
             </button>
@@ -74,7 +74,6 @@
                 TICKETS
             </button>
         </div>
-
     </main>
 </body>
 
