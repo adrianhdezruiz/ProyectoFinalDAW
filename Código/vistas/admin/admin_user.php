@@ -164,39 +164,155 @@
 
         </div>
 
-        <!--Panel que se mostrará cuando el administrador seleccione ver o editar-->
+        <!--Panel que se mostrará cuando el administrador seleccione Añadir usuario-->
+        <!-- Los usuarios creados por el administrador no requieren de confirmación-->
 
         <div class="row mt-5">
             <div class="col-12 border text-success fs-4">
                 <div class="row">
                     <!--Icono cerrar-->
-                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <span class="fw-bolder">X</span></div>
+                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
 
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Id</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Enter email"></div>
+                    <div class="col-3 border bg-success text-dark p-2">Nombre</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nombre"></div>
                 </div>
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Id</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Enter email"></div>
+                    <div class="col-3 border bg-success text-dark p-2">Apellidos</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce apellido"></div>
                 </div>
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Id</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Enter email"></div>
+                    <div class="col-3 border bg-success text-dark p-2">Telefono</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce telefono"></div>
                 </div>
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Id</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Enter email"></div>
+                    <div class="col-3 border bg-success text-dark p-2">Email</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce email"></div>
                 </div>
+
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Id</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Enter email"></div>
+                    <div class="col-3 border bg-success text-dark p-2">Rol</div>
+                    <div class="col-9 border" style="background-color:white">
+                        <select class="form-select fs-4" style="border:none" aria-label="Default select example">
+                            <option value="1">Admin</option>
+                            <option value="2">Usuario</option>
+
+                        </select>
+                    </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Contraseña</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce contraseña"></div>
+                </div>
+
                 <div class="row">
 
-                    <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="exampleInputEmail1" value="Confirmar edicion"></div>
+                    <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="exampleInputEmail1" value="AÑADIR USUARIO"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!--Panel que se mostrará cuando el administrador seleccione Editar-->
+
+        <div class="row mt-5">
+            <div class="col-12 border text-success fs-4">
+                <div class="row">
+                    <!--Icono cerrar-->
+                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2 fw-bold">Id</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Id" readonly></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Nombre</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nuevo nombre"></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Apellidos</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nuevo apellido"></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Telefono</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nuevo telefono"></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Email</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nuevo email"></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Rol</div>
+                    <div class="col-9 border" style="background-color:white">
+                        <select class="form-select fs-4" style="border:none" aria-label="Default select example">
+                            <option value="1">Admin</option>
+                            <option value="2">Usuario</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="exampleInputEmail1" value="CONFIRMAR EDICION"></div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <!--Panel que se mostrará cuando el administrador seleccione Ver-->
+
+        <div class="row mt-5">
+            <div class="col-12 border text-success fs-4">
+                <div class="row">
+                    <!--Icono cerrar-->
+                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2 fw-bold">Id</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Id" readonly></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Nombre</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Nombre" readonly></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Apellidos</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Apellido" readonly></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Telefono</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Telefono" readonly></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Email</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Email"></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Fecha Registro</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Fecha registro"></div>
+                </div>
+                <div class="row">
+                    <div class="col-3 border bg-success text-dark p-2">Rol</div>
+                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Rol"></div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-12 border bg-secondary"> .</div>
                 </div>
 
 
