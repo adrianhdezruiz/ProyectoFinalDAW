@@ -224,7 +224,7 @@
 
                         <div class="row">
                             <div class="col-3 border bg-success text-dark p-2">Fecha registro</div>
-                            <div class="col-9 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Fecha" readonly></div>
+                            <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Fecha" readonly></div>
                         </div>
                     </div>
                     <div class="col-3 bg-secondary">
