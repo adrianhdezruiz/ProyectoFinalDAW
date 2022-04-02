@@ -18,5 +18,9 @@ $secondary:#edf0ee;
   width: 15%;
 }
 
+#cerrarPanel:hover{
+  cursor:grab;
+}
+
 
 @import "../node_modules/bootstrap/scss/bootstrap";
