@@ -55,21 +55,19 @@
 
     <main class="row w-50 fs-4 " style="margin: auto;position:absolute; top:30%; left:25%">
 
-        <ul class="list-group mb-5 ">
-            <li class="list-group-item bg-dark text-success text-center">DETALLES TICKET</li>
-            <li class="list-group-item p-3 border border-0">ID TICKET:</li>
-            <li class="list-group-item bg-secondary p-3 border border-0">NOMBRE:</li>
-            <li class="list-group-item p-3 border border-0">FECHA:</li>
-            <li class="list-group-item bg-secondary p-3 border border-0">HORA INICIO:</li>
-            <li class="list-group-item p-3 border border-0">HORA FIN:</li>
-            <li class="list-group-item bg-secondary p-3 border border-0">MARCA: </li>
-            <li class="list-group-item p-3 border border-0">MODELO: </li>
-            <li class="list-group-item bg-secondary p-3 border border-0">PRECIO FINAL: </li>
-            <li class=" list-group-item d-flex justify-content-center align-items-vertical p-3 border border-0">
-
-                <input type="button" class="btn btn-primary rounded rounded-pill fs-4" value="Pagar con PayPal">
-            </li>
-        </ul>
+        <div class="col-12 bg-dark text-success p-1 text-center">TICKET</div>
+        <a href="#" class="list-group-item list-group-item-action  " aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 fw-bolder">1234567890ABCDE</h5>
+                <small><i>04/04/2022 | 12:00 - 13:00</i></small>
+            </div>
+            <p class="mb-1">user@gmail.com</p>
+            <small>Marca1 Modelo1</small>
+            <hr>
+            <small class="blockquote-footer">TOTAL: X.XX €</small>
+            <hr>
+            <small class="d-flex justify-content-center"><input type="button" class="btn btn-primary rounded rounded-pill fs-4" value="Pagar con PayPal"></small>
+        </a>
 
     </main>
 
