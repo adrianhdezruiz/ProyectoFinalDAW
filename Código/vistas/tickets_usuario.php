@@ -54,73 +54,48 @@
         </nav>
     </header>
 
-    <main class="row w-100 fs-4 " style="margin: auto;position:absolute; top:25%; ">
 
-        <ul class="list-group mb-4 col-lg-4 col-md-6 col-sm-12">
-            <li class="list-group-item bg-dark text-success text-center">TICKET</li>
-            <li class="list-group-item p-3 border border-0">ID TICKET:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">FECHA:</li>
-            <li class="list-group-item  p-3 border border-0">HORA INICIO:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">HORA FIN:</li>
-            <li class="list-group-item  p-3 border border-0">MARCA: </li>
-            <li class="list-group-item p-3 border bg-secondary  border-0">MODELO: </li>
-            <li class="list-group-item p-3 border border-0">PRECIO FINAL: </li>
-        </ul>
+    <main class="row w-75 fs-4 " style="margin: auto;position:absolute; top:25%; left:12.5%">
 
-        <ul class="list-group mb-4 col-lg-4 col-md-6 col-sm-12 ">
-            <li class="list-group-item bg-dark text-success text-center">TICKET</li>
-            <li class="list-group-item p-3 border border-0">ID TICKET:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">FECHA:</li>
-            <li class="list-group-item  p-3 border border-0">HORA INICIO:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">HORA FIN:</li>
-            <li class="list-group-item  p-3 border border-0">MARCA: </li>
-            <li class="list-group-item p-3 border bg-secondary  border-0">MODELO: </li>
-            <li class="list-group-item p-3 border border-0">PRECIO FINAL: </li>
-        </ul>
 
-        <ul class="list-group mb-4 col-lg-4 col-md-6 col-sm-12">
-            <li class="list-group-item bg-dark text-success text-center">TICKET</li>
-            <li class="list-group-item p-3 border border-0">ID TICKET:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">FECHA:</li>
-            <li class="list-group-item  p-3 border border-0">HORA INICIO:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">HORA FIN:</li>
-            <li class="list-group-item  p-3 border border-0">MARCA: </li>
-            <li class="list-group-item p-3 border bg-secondary  border-0">MODELO: </li>
-            <li class="list-group-item p-3 border border-0">PRECIO FINAL: </li>
-        </ul>
+        <div class="col-12 bg-dark text-success p-1 text-center">MIS TICKETS</div>
 
-        <ul class="list-group mb-4 col-lg-4 col-md-6 col-sm-12">
-            <li class="list-group-item bg-dark text-success text-center"> TICKET</li>
-            <li class="list-group-item p-3 border border-0">ID TICKET:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">FECHA:</li>
-            <li class="list-group-item  p-3 border border-0">HORA INICIO:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">HORA FIN:</li>
-            <li class="list-group-item  p-3 border border-0">MARCA: </li>
-            <li class="list-group-item p-3 border bg-secondary  border-0">MODELO: </li>
-            <li class="list-group-item p-3 border border-0">PRECIO FINAL: </li>
-        </ul>
+        <a href="#" class="list-group-item list-group-item-action  " aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 fw-bolder">1234567890ABCDE</h5>
+                <small><i>04/04/2022 | 12:00 - 13:00</i></small>
+            </div>
+            <p class="mb-1">user@gmail.com</p>
+            <small>Marca1 Modelo1</small>
+            <hr>
+            <small class="blockquote-footer">TOTAL: X.XX €</small>
+        </a>
 
-        <ul class="list-group mb-4 col-lg-4 col-md-6 col-sm-12">
-            <li class="list-group-item bg-dark text-success text-center">TICKET</li>
-            <li class="list-group-item p-3 border border-0">ID TICKET:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">FECHA:</li>
-            <li class="list-group-item  p-3 border border-0">HORA INICIO:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">HORA FIN:</li>
-            <li class="list-group-item  p-3 border border-0">MARCA: </li>
-            <li class="list-group-item p-3 border bg-secondary  border-0">MODELO: </li>
-            <li class="list-group-item p-3 border border-0">PRECIO FINAL: </li>
-        </ul>
+        <a href="#" class="list-group-item list-group-item-action  " aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 fw-bolder">1234567890ABCDE</h5>
+                <small><i>04/04/2022 | 12:00 - 13:00</i></small>
+            </div>
+            <p class="mb-1">user@gmail.com</p>
+            <small>Marca1 Modelo1</small>
+            <hr>
+            <small class="blockquote-footer">TOTAL: X.XX €</small>
+        </a>
 
-        <ul class="list-group mb-4 col-lg-4 col-md-6 col-sm-12">
-            <li class="list-group-item bg-dark text-success text-center">TICKET</li>
-            <li class="list-group-item p-3 border border-0">ID TICKET:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">FECHA:</li>
-            <li class="list-group-item  p-3 border border-0">HORA INICIO:</li>
-            <li class="list-group-item bg-secondary  p-3 border border-0">HORA FIN:</li>
-            <li class="list-group-item  p-3 border border-0">MARCA: </li>
-            <li class="list-group-item p-3 border bg-secondary  border-0">MODELO: </li>
-            <li class="list-group-item p-3 border border-0">PRECIO FINAL: </li>
-        </ul>
+        <a href="#" class="list-group-item list-group-item-action  " aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1 fw-bolder">1234567890ABCDE</h5>
+                <small><i>04/04/2022 | 12:00 - 13:00</i></small>
+            </div>
+            <p class="mb-1">user@gmail.com</p>
+            <small>Marca1 Modelo1</small>
+            <hr>
+            <small class="blockquote-footer">TOTAL: X.XX €</small>
+        </a>
+
+
+
+
 
 
 
