@@ -125,23 +125,23 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Modelo</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el nombre del modelo"></div>
+                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Modelo</div>
+                    <div class="col-lg-9 border col-sm-12" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el nombre del modelo"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Descripcion</div>
-                    <div class="col-9 border" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10">Introduce una descripción</textarea></div>
+                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Descripcion</div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10">Introduce una descripción</textarea></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Precio / hora</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Introduce el precio por hora"></div>
+                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Precio / hora</div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Introduce el precio por hora"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Imagen</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="file" class="form-control p-3" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce apellido"></div>
+                    <div class="col-lg-3 col-sm-12border bg-success text-dark p-2">Imagen</div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="file" class="form-control p-3" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce apellido"></div>
                 </div>
 
                 <div class="row">
@@ -165,18 +165,18 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Modelo</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el nuevo nombre del modelo"></div>
+                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Modelo</div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el nuevo nombre del modelo"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Descripcion</div>
-                    <div class="col-9 border" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10">Introduce una nueva descripción</textarea></div>
+                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Descripcion</div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10">Introduce una nueva descripción</textarea></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Precio / hora</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Introduce el nuevo precio por hora"></div>
+                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Precio / hora</div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Introduce el nuevo precio por hora"></div>
                 </div>
 
 
@@ -201,33 +201,33 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-lg-9 col-sm-12">
                         <div class="row">
-                            <div class="col-3 border bg-success text-dark p-2">Id</div>
-                            <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" readonly placeholder="Id"></div>
+                            <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Id</div>
+                            <div class="col-lg-9  col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" readonly placeholder="Id"></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-3 border bg-success text-dark p-2">Modelo</div>
-                            <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" readonly placeholder="Modelo"></div>
+                            <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Modelo</div>
+                            <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" readonly placeholder="Modelo"></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-3 border bg-success text-dark p-2">Descripcion</div>
-                            <div class="col-9 border p-3" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10" readonly>Descripcion</textarea></div>
+                            <div class="col-3-lg col-sm-12 border bg-success text-dark p-2">Descripcion</div>
+                            <div class="col-9-lg col-sm-12  border p-3" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10" readonly>Descripcion</textarea></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-3 border bg-success text-dark p-2">Precio / hora</div>
-                            <div class="col-9 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" readonly value="5"></div>
+                            <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Precio / hora</div>
+                            <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" readonly value="5"></div>
                         </div>
 
                         <div class="row">
-                            <div class="col-3 border bg-success text-dark p-2">Fecha registro</div>
-                            <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Fecha" readonly></div>
+                            <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Fecha registro</div>
+                            <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Fecha" readonly></div>
                         </div>
                     </div>
-                    <div class="col-3 bg-secondary">
+                    <div class="col-lg-3 col-sm-12 bg-secondary">
                         <img src="../../../Imagenes/567213_00_1.jpg" width="100%" height="100%">
                     </div>
                 </div>
@@ -252,13 +252,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Nº de serie</div>
-                    <div class="col-9 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el numero de serie"></div>
+                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Nº de serie</div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el numero de serie"></div>
                 </div>
 
                 <div class="row">
-                    <div class="col-3 border bg-success text-dark p-2">Modelo</div>
-                    <div class="col-9 border" style="background-color:white">
+                    <div class="col-lg-3 border bg-success text-dark p-2">Modelo</div>
+                    <div class="col-lg-9 border" style="background-color:white">
                         <select class="form-select fs-4" style="border:none" aria-label="Default select example">
                             <option value="1">Modelo1</option>
                             <option value="2">Modelo2</option>
@@ -266,9 +266,6 @@
                         </select>
                     </div>
                 </div>
-
-
-
 
                 <div class="row">
 

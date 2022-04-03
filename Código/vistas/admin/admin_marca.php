@@ -53,7 +53,7 @@
     </header>
 
     <main class="w-50 mt-5" style="margin: auto;">
-
+        <h1 class="text-success fw-bold text-center m-3">MARCAS</h1>
         <div class="row">
 
             <div class="col-4 fs-4 mt-4 ">
