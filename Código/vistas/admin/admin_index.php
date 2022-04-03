@@ -69,7 +69,7 @@
         </div>
 
         <div class="col-12 ">
-            <button class="w-100 bg-success p-4 m-3 fw-bold d-flex  align-items-center rounded-3" onclick="location.href=''" style="height: 10rem;">
+            <button class="w-100 bg-success p-4 m-3 fw-bold d-flex  align-items-center rounded-3" onclick="location.href='admin_ticket.php'" style="height: 10rem;">
                 <img src="../../../Imagenes/icono3-modified.png" class="img-fluid me-3 ">
                 TICKETS
             </button>
