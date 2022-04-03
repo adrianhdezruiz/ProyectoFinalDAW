@@ -93,7 +93,7 @@
 
                     <form action="ticket.php">
                         <div>
-                            <label for="exampleInputEmail1" class="form-label">Fecha</label>
+                            <label for="exampleInputEmail1" class="form-label fw-bold">Fecha</label>
                             <input type="date" class="form-control text-center w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <hr>
@@ -101,14 +101,14 @@
                             <div class="row ">
                                 <div class="col-6 b">
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">Hora inicio</label>
+                                        <label for="exampleInputEmail1" class="form-label fw-bold">Hora inicio</label>
                                         <input type="time" class="form-control text-center w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
                                     </div>
                                 </div>
 
                                 <div class="col-6">
 
-                                    <label for=" exampleInputEmail1" class="form-label">Hora fin</label>
+                                    <label for=" exampleInputEmail1" class="form-label fw-bold">Hora fin</label>
                                     <input type="time" class="form-control text-center w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
                                 </div>
                             </div>
