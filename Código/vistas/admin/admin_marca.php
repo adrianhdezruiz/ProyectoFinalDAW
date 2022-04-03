@@ -53,67 +53,126 @@
     </header>
 
     <main class="w-50 mt-5" style="margin: auto;">
+
         <h1 class="text-success fw-bold text-center m-3">MARCAS</h1>
-        <div class="row">
-
-            <div class="col-4 fs-4 mt-4 ">
-                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 18rem;">
-                    <div class="card-header text-center fw-bold bg-success">Marca 1</div>
-                    <div class="card-body text-dark">
-                        <h5 class="card-title">Nº de modelos: 3</h5>
-                        <h5 class="card-title">Nº de patines: 5</h5>
-                        <p class="card-text text-center"><a href="admin_modelos.php">Administrar</a></p>
-                    </div>
-                </div>
+        <div class="row bg-dark ">
+            <div class="col-10">
+                <input type="text" class="form-control mt-2" placeholder="Crea una nueva marca" style="height: 3rem;">
             </div>
-
-            <div class="col-4 fs-4 mt-4">
-                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 18rem;">
-                    <div class="card-header text-center fw-bold bg-success">Marca 2</div>
-                    <div class="card-body text-dark">
-                        <h5 class="card-title">Nº de modelos: 3</h5>
-                        <h5 class="card-title">Nº de patines: 5</h5>
-                        <p class="card-text text-center"><a href="admin_modelos.php">Administrar</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4 fs-4 mt-4">
-                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 18rem;">
-                    <div class="card-header text-center fw-bold bg-success">Marca 3</div>
-                    <div class="card-body text-dark">
-                        <h5 class="card-title">Nº de modelos: 2</h5>
-                        <h5 class="card-title">Nº de patines: 4</h5>
-                        <p class="card-text text-center"><a href="admin_modelos.php">Administrar</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4 fs-4 mt-4">
-                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 18rem;">
-                    <div class="card-header text-center fw-bold bg-success">Marca 4</div>
-                    <div class="card-body text-dark">
-                        <h5 class="card-title">Nº de modelos: 2</h5>
-                        <h5 class="card-title">Nº de patines: 1</h5>
-                        <p class="card-text text-center"><a href="admin_modelos.php">Administrar</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-4 fs-4 mt-4">
-                <div class="card border-secondary border border-5 mb-3 mt-4" style="max-width: 18rem;">
-                    <div class="card-header text-center fw-bold bg-success">Marca 5</div>
-                    <div class="card-body text-dark">
-                        <h5 class="card-title">Nº de modelos: 4</h5>
-                        <h5 class="card-title">Nº de patines: 7</h5>
-                        <p class="card-text text-center"><a href="admin_modelos.php">Administrar</a></p>
-                    </div>
-                </div>
-            </div>
+            <div class="col-2"><input type="button" class="btn btn-success form-control mt-2" value="Añadir" style="height: 3rem;"></div>
         </div>
 
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 fs-4 mt-4 ">
+                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 24rem;">
+                    <div class="card-header text-center fw-bold bg-success">Marca 1</div>
+                    <div class="card-body text-dark">
+                        <ul>
+                            <li class="card-title">Nº de modelos: 3</li>
+                            <li class="card-title">Nº de patines: 5</li>
+                        </ul>
+                        <p class="card-text text-center fs-5">
+                            <a href="admin_modelos.php">Administrar | </a>
+                            <a href="#">Editar | </a>
+                            <a href="#">Eliminar</a>
+                        </p>
+                    </div>
+
+                    <!--Se desplegará cuando el usuario pulse en editar-->
+
+                    <div id="editarMarca">
+                        <div class="card-header text-center fw-bold bg-success d-flext justify-content-center text-success">
+                            .
+                            <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="10%" height="80%" style="float:right;">
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-5" style="font-size: 1rem;">
+                                    Nuevo nombre marca:
+                                </div>
+                                <div class="col-7">
+                                    <input type="text" class="form-control">
+                                </div>
+                                <input type="button" value="Confirmar edicion" class="btn btn-success form-control mt-3">
+                            </div>
+                        </div>
+                    </div>
+                    <!--------------------------------------------------------------->
+                </div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 fs-4 mt-4 ">
+                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 24rem;">
+                    <div class="card-header text-center fw-bold bg-success">Marca 2</div>
+                    <div class="card-body text-dark">
+                        <ul>
+                            <li class="card-title">Nº de modelos: 3</li>
+                            <li class="card-title">Nº de patines: 5</li>
+                        </ul>
+                        <p class="card-text text-center fs-5">
+                            <a href="admin_modelos.php">Administrar | </a>
+                            <a href="#">Editar | </a>
+                            <a href="#">Eliminar</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 fs-4 mt-4 ">
+                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 24rem;">
+                    <div class="card-header text-center fw-bold bg-success">Marca 3</div>
+                    <div class="card-body text-dark">
+                        <ul>
+                            <li class="card-title">Nº de modelos: 3</li>
+                            <li class="card-title">Nº de patines: 5</li>
+                        </ul>
+                        <p class="card-text text-center fs-5">
+                            <a href="admin_modelos.php">Administrar | </a>
+                            <a href="#">Editar | </a>
+                            <a href="#">Eliminar</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 fs-4 mt-4 ">
+                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 24rem;">
+                    <div class="card-header text-center fw-bold bg-success">Marca 4</div>
+                    <div class="card-body text-dark">
+                        <ul>
+                            <li class="card-title">Nº de modelos: 3</li>
+                            <li class="card-title">Nº de patines: 5</li>
+                        </ul>
+                        <p class="card-text text-center fs-5">
+                            <a href="admin_modelos.php">Administrar | </a>
+                            <a href="#">Editar | </a>
+                            <a href="#">Eliminar</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 fs-4 mt-4 ">
+                <div class="card border-secondary border border-5 mb-3  mt-4" style="max-width: 24rem;">
+                    <div class="card-header text-center fw-bold bg-success">Marca 5</div>
+                    <div class="card-body text-dark">
+                        <ul>
+                            <li class="card-title">Nº de modelos: 3</li>
+                            <li class="card-title">Nº de patines: 5</li>
+                        </ul>
+                        <p class="card-text text-center fs-5">
+                            <a href="admin_modelos.php">Administrar | </a>
+                            <a href="#">Editar | </a>
+                            <a href="#">Eliminar</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
 
 
+
+        </div>
     </main>
 
 </body>
