@@ -251,10 +251,6 @@
 
                 </div>
 
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Nº de serie</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el numero de serie"></div>
-                </div>
 
                 <div class="row">
                     <div class="col-lg-3 border bg-success text-dark p-2">Modelo</div>
