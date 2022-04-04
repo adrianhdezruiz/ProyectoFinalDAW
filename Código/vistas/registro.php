@@ -55,7 +55,7 @@
     </header>
 
     <div class="container-fluid border d-flex justify-content-center align-items-center vh-100 bg-success">
-        <form class="border w-50  bg-light text-center fs-5" style="position: absolute;top:35%;">
+        <form action="#" method="POST" class="needs-validation border w-50  bg-light text-center fs-5" style="position: absolute;top:35%;" novalidate>
 
             <!-- Cabecera login-->
             <div class="container bg-dark w-100 p-1 mb-3">
@@ -68,17 +68,23 @@
                     <!--Nombre-->
                     <div class="form-group p-2 ms-3">
                         <label class="mb-3"><b>NOMBRE</b></label>
-                        <input type="text" class="form-control p-2" id="nombreRegistro" placeholder="Introduce tu nombre">
+                        <input type="text" class="form-control p-2" id="nombreRegistro" placeholder="Introduce tu nombre" required maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóú'-]*">
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Solo se permiten letras. No introduzcas espacios</div>
                     </div>
                     <!--Telefono-->
                     <div class="form-group p-2 ms-3">
                         <label class="mb-3"><b>TELEFONO</b></label>
-                        <input type="text" class="form-control p-2" id="telefonoRegistro" placeholder="Introduce tu telefono">
+                        <input type="text" class="form-control p-2" id="telefonoRegistro" placeholder="Introduce tu telefono" pattern="[0-9]*" minlength="9" maxlength="9" required>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Introduzca un numero telefónico válido</div>
                     </div>
                     <!--Contraseña-->
-                    <div class="form-group p-2 ms-3">
+                    <div class="form-group p-2 ms-3 mb-1">
                         <label class="mb-3"><b>CONTRASEÑA</b></label>
-                        <input type="password" class="form-control p-2" id="contrasenyaRegistro" placeholder="Introduce tu contraseña">
+                        <input type="password" class="form-control p-2" id="contrasenyaRegistro" placeholder="Introduce tu contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Mínimo seis caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>
                     </div>
                 </div>
                 <!--Derecha-->
@@ -86,29 +92,58 @@
                     <!--Apellidos-->
                     <div class="form-group p-2 me-3">
                         <label class="mb-3"><b>APELLIDOS</b></label>
-                        <input type="text" class="form-control p-2" id="apellidosRegistro" placeholder="Introduce tus apellidos">
+                        <input type="text" class="form-control p-2" id="apellidosRegistro" placeholder="Introduce tus apellidos" maxlength="200" pattern="[ A-Za-zÁÉÍÓÚáéíóú'-]*" required>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Solo se permiten letras</div>
                     </div>
                     <!--Correo electrónico-->
                     <div class="form-group p-2 me-3">
                         <label class="mb-3"><b>EMAIL</b></label>
-                        <input type="email" class="form-control p-2" id="emailRegistro" placeholder="Introduce tu email">
+                        <input type="email" class="form-control p-2" id="emailRegistro" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9áéíóúÁÉÍÓÚ_-]*@(gmail|outlook).[a-z]{2,3}" required>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Introduzca un dominio válido</div>
                     </div>
                     <!--Repetir contraseña-->
                     <div class="form-group p-2 me-3">
                         <label class="mb-3"><b>REPETIR CONTRASEÑA</b></label>
-                        <input type="password" class="form-control p-2" id="rcontrasenyaRegistro" placeholder="Repite tu contraseña">
+                        <input type="password" class="form-control p-2 mb-1" id="rcontrasenyaRegistro" placeholder="Repite tu contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                        <div class="valid-feedback">Campo correcto</div>
+                        <div class="invalid-feedback">Mínimo seis caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>
                     </div>
 
                 </div>
             </div>
             <!--Boton-->
             <div class="form-group mb-3 mt-3 p-3">
-                <button type="submit" class="btn btn-dark mb-3 w-100"><b class="text-success">Registrarse</b></button>
+                <button type="submit" id="registerSubmit" class="btn btn-dark mb-3 w-100"><b class="text-success">Registrarse</b></button>
+                <span id="errorContrasenya" class="text-danger"></span>
                 <p>¿Ya tienes cuenta? <a href="login.php">Inicia sesión</a></p>
+
             </div>
         </form>
     </div>
 
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/validacion.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $('#registerSubmit').click(function(e) {
+
+                var passwd = $('#contrasenyaRegistro').val();
+                var passwdConfirmed = $('#rcontrasenyaRegistro').val();
+
+                if (passwd != passwdConfirmed) {
+
+                    e.preventDefault();
+                    $('#errorContrasenya').html('Las contraseñas no coinciden');
+                } else {
+                    $('#errorContrasenya').html('');
+
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
