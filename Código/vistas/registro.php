@@ -99,7 +99,9 @@
                     <!--Correo electrónico-->
                     <div class="form-group p-2 me-3">
                         <label class="mb-3"><b>EMAIL</b></label>
+
                         <input type="email" class="form-control p-2" id="emailRegistro" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9áéíóúÁÉÍÓÚ_-]*@(gmail|outlook).[a-z]{2,3}" required>
+
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Introduzca un dominio válido</div>
                     </div>
@@ -115,8 +117,10 @@
             </div>
             <!--Boton-->
             <div class="form-group mb-3 mt-3 p-3">
-                <button type="submit" id="registerSubmit" class="btn btn-dark mb-3 w-100"><b class="text-success">Registrarse</b></button>
+                <small>Te enviaremos un correo para confirmar tu email</small>
+                <button type="submit" id="registerSubmit" class="btn btn-dark mt-3 mb-3 w-100"><b class="text-success">Registrarse</b></button>
                 <span id="errorContrasenya" class="text-danger"></span>
+
                 <p>¿Ya tienes cuenta? <a href="login.php">Inicia sesión</a></p>
 
             </div>
