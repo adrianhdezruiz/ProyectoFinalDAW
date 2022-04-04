@@ -1,0 +1,95 @@
+
+CREATE TABLE `bdd`.`Rol` (
+  `idRol` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idRol`));
+
+
+CREATE TABLE `bdd`.`Usuario` (
+  `idUsuario` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(50) NOT NULL,
+  `apellidos` VARCHAR(200) NOT NULL,
+  `telefono` VARCHAR(15) NOT NULL,
+  `email` VARCHAR(255) NOT NULL,
+  `fechaRegistro` TIMESTAMP NOT NULL,
+  `contraseña` VARCHAR(100) NOT NULL,
+  `codigoRegistro` VARCHAR(45) NULL,
+  `confirmado` BIT NOT NULL,
+  `idRol` INT NOT NULL,
+  PRIMARY KEY (`idUsuario`),
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
+  UNIQUE INDEX `codigoRegistro_UNIQUE` (`codigoRegistro` ASC) VISIBLE,
+  INDEX `fk_Usuario_Rol_idx` (`idRol` ASC) VISIBLE,
+  CONSTRAINT `fk_Usuario_Rol`
+    FOREIGN KEY (`idRol`)
+    REFERENCES `bdd`.`Rol` (`idRol`)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE);
+
+
+CREATE TABLE `bdd`.`Marca` (
+  `idMarca` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(100) NOT NULL,
+  `fechaRegistro` TIMESTAMP NOT NULL,
+  PRIMARY KEY (`idMarca`));
+
+
+CREATE TABLE `bdd`.`Modelo` (
+  `idModelo` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` VARCHAR(4000) NOT NULL,
+  `imagen` VARCHAR(100) NOT NULL,
+  `precioHora` FLOAT NOT NULL,
+  `fechaRegistro` TIMESTAMP NOT NULL,
+  `idMarca` INT NOT NULL,
+  PRIMARY KEY (`idModelo`),
+  INDEX `fk_Modelo_Marca_idx` (`idMarca` ASC) VISIBLE,
+  CONSTRAINT `fk_Modelo_Marca`
+    FOREIGN KEY (`idMarca`)
+    REFERENCES `bdd`.`Marca` (`idMarca`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
+
+CREATE TABLE `bdd`.`Patin` (
+  `idPatin` INT NOT NULL AUTO_INCREMENT,
+  `idMarca` INT NOT NULL,
+  `idModelo` INT NOT NULL,
+  PRIMARY KEY (`idPatin`),
+  INDEX `fk_Patin_Marca_idx` (`idMarca` ASC) VISIBLE,
+  INDEX `fk_Patin_Modelo_idx` (`idModelo` ASC) VISIBLE,
+  CONSTRAINT `fk_Patin_Marca`
+    FOREIGN KEY (`idMarca`)
+    REFERENCES `bdd`.`Marca` (`idMarca`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_Patin_Modelo`
+    FOREIGN KEY (`idModelo`)
+    REFERENCES `bdd`.`Modelo` (`idModelo`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE);
+    
+    
+  CREATE TABLE `bdd`.`Servicio` (
+  `idServicio` VARCHAR(20) NOT NULL,
+  `totalPrecio` FLOAT NOT NULL,
+  `fechaRegistro` TIMESTAMP NOT NULL,
+  `horaInicio` TIME NOT NULL,
+  `horaFinal` TIME NOT NULL,
+  `idUsuario` INT NOT NULL,
+  `idPatin` INT NULL,
+  PRIMARY KEY (`idServicio`),
+  UNIQUE INDEX `idServicio_UNIQUE` (`idServicio` ASC) VISIBLE,
+  INDEX `fk_Servicio_Usuario_idx` (`idUsuario` ASC) VISIBLE,
+  INDEX `fk_Servicio_Patin_idx` (`idPatin` ASC) VISIBLE,
+  CONSTRAINT `fk_Servicio_Usuario`
+    FOREIGN KEY (`idUsuario`)
+    REFERENCES `bdd`.`Usuario` (`idUsuario`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_Servicio_Patin`
+    FOREIGN KEY (`idPatin`)
+    REFERENCES `bdd`.`Patin` (`idPatin`)
+    ON DELETE SET NULL
+    ON UPDATE RESTRICT);
+  
+
