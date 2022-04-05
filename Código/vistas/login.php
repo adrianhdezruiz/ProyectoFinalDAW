@@ -54,7 +54,7 @@
 
   <div class="container-fluid border d-flex justify-content-center align-items-center vh-100 bg-success">
 
-    <form class="border w-25 bg-light text-center fs-5" style="position: absolute; top:35%">
+    <form class="needs-validation border w-25 bg-light text-center fs-5" style="position: absolute; top:35%" novalidate>
 
       <!-- Cabecera login-->
       <div class="container bg-dark w-100 p-1 mb-3">
@@ -63,13 +63,17 @@
       <!--Email-->
       <div class="form-group p-2">
         <label class="mb-3"><b>EMAIL</b></label>
-        <input type="email" class="form-control p-2" id="email" aria-describedby="emailHelp" placeholder="Introduce tu email">
-        <small id="emailHelp" class="form-text text-muted">No compartiremos tu email con nadie mas.</small>
+        <input type="email" class="form-control p-2" id="email" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9áéíóúÁÉÍÓÚ_-]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
+        <div class="valid-feedback">Campo correcto</div>
+        <div class="invalid-feedback">Introduce un email valido</div>
+
       </div>
       <!--Contraseña-->
       <div class="form-group mb-3 p-2">
         <label class="mb-3"><b>CONTRASEÑA</b></label>
-        <input type="password" class="form-control p-2" id="contrasenya" placeholder="Contraseña">
+        <input type="password" class="form-control p-2" id="contrasenya" placeholder="Contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+        <div class="valid-feedback">Campo correcto</div>
+        <div class="invalid-feedback">Introduce una contraseña valida</div>
       </div>
       <!--Boton-->
       <div class="form-group mb-3 p-2">
@@ -79,6 +83,7 @@
     </form>
   </div>
 
+  <script src="../js/validacion.js"></script>
 </body>
 
 </html>
