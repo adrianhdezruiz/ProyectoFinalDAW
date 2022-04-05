@@ -2,10 +2,12 @@
 
 include '../config/dbconnection.php';
 
+//REGISTRO
+
 if (!empty($_POST['registerSubmit'])) {
-    echo "<script>alert('registro')</script>";
 }
 
+//LOGIN
+
 if (!empty($_POST['loginSubmit'])) {
-    echo "<script>alert('registro')</script>";
 }
