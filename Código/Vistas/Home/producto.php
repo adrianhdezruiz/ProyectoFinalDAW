@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../sass/custom.css">
+    <link rel="stylesheet" href="../../sass/custom.css">
 </head>
 
 <body class="bg-success">
@@ -14,7 +14,7 @@
 
         <!--Cabecera-->
         <header class="row bg-dark d-flex justify-content-center">
-            <img src="../../Imagenes/logo1.png" id="logo_header">
+            <img src="../../../Imagenes/logo1.png" id="logo_header">
 
             <!-- Nav -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
@@ -23,11 +23,11 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="login.php">Login | </a>
+                            <a class="nav-link" href="../Account/login.php">Login | </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="registro.php">Registro | </a>
+                            <a class="nav-link" href="../Account/registro.php">Registro | </a>
                         </li>
 
                         <li class="nav-item">
@@ -41,12 +41,12 @@
 
                         <!--Solo usuarios registrados-->
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Cerrar sesión</a>
+                            <a class="nav-link" href="../Account/login.php">Cerrar sesión</a>
                         </li>
 
                         <!----------------Administración------------------->
                         <li class="nav-item">
-                            <a class="nav-link" href="admin/admin_index.php">| Administracion</a>
+                            <a class="nav-link" href="../Admin/admin_index.php">| Administracion</a>
                         </li>
 
 
@@ -61,7 +61,7 @@
             <!--Main Izqda -->
             <div class="col-12 col-lg-5 col-md-12 col-sm-12 bg-dark text-success d-flex justify-content-center p-3 ">
                 <div class="card" style="width: 45em;">
-                    <img class="card-img-top" id="img" src="../../Imagenes/567213_00_1.jpg" style="height: 100%;" data-zoom-image="../../Imagenes/567213_00_1.jpg">
+                    <img class="card-img-top" id="img" src="../../../Imagenes/567213_00_1.jpg" style="height: 100%;" data-zoom-image="../../Imagenes/567213_00_1.jpg">
 
                 </div>
             </div>

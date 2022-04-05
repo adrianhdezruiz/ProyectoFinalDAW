@@ -21,25 +21,25 @@
                 <ul class="navbar-nav">
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="../login.php">Login | </a>
+                        <a class="nav-link" href="../Account/login.php">Login | </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../registro.php">Registro | </a>
+                        <a class="nav-link" href="../Account/registro.php">Registro | </a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="../principal.php">Home |</a>
-                    </li>
-
-                    <!--Solo usuarios registrados-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../tickets_usuario.php">Mis tickets |</a>
+                        <a class="nav-link" href="../Home/principal.php">Home |</a>
                     </li>
 
                     <!--Solo usuarios registrados-->
                     <li class="nav-item">
-                        <a class="nav-link" href="../login.php">Cerrar sesión</a>
+                        <a class="nav-link" href="../Home/tickets_usuario.php">Mis tickets |</a>
+                    </li>
+
+                    <!--Solo usuarios registrados-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Account/login.php">Cerrar sesión</a>
                     </li>
 
                     <!----------------Administración------------------->

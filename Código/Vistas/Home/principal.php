@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../sass/custom.css">
+    <link rel="stylesheet" href="../../sass/custom.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 
         <!--Cabecera-->
         <header class="row bg-dark d-flex justify-content-center">
-            <img src="../../Imagenes/logo1.png" id="logo_header">
+            <img src="../../../Imagenes/logo1.png" id="logo_header">
 
             <!-- Nav -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
@@ -24,11 +24,11 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="login.php">Login | </a>
+                            <a class="nav-link" href="../Account/login.php">Login | </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="registro.php">Registro | </a>
+                            <a class="nav-link" href="../Account/registro.php">Registro | </a>
                         </li>
 
                         <li class="nav-item">
@@ -42,12 +42,12 @@
 
                         <!--Solo usuarios registrados-->
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Cerrar sesión</a>
+                            <a class="nav-link" href="../Account/login.php">Cerrar sesión</a>
                         </li>
 
                         <!----------------Administración------------------->
                         <li class="nav-item">
-                            <a class="nav-link" href="admin/admin_index.php">| Administración</a>
+                            <a class="nav-link" href="../Admin/admin_index.php">| Administración</a>
                         </li>
 
                     </ul>
@@ -78,7 +78,7 @@
             <div class="col-12 col-lg-3 col-md-12 col-sm-12 p-3 mb-1   d-flex justify-content-center">
                 <input type="text" class="form-control me-0" style="width:17rem; position:relative; right:7%" placeholder="Busca un modelo...">
                 <button class="form-control ms-1 bg-dark text-success" style="width:6rem; border: none;position:relative; right:7%">
-                    <img src="../../Imagenes/lupa_buscador.png" alt="" style="width: 40%;height:55%">
+                    <img src="../../../Imagenes/lupa_buscador.png" alt="" style="width: 40%;height:55%">
                 </button>
             </div>
         </nav>
@@ -90,7 +90,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
                     <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                        <img src="../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
+                        <img src="../../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
 
                             <h5 class="card-title text-dark mb-3">XIAOMI</h5>
@@ -101,7 +101,7 @@
 
                 <div class="col-12 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center">
                     <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                        <img src="../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
+                        <img src="../../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
 
                             <h5 class="card-title text-dark mb-3">XIAOMI</h5>
@@ -112,7 +112,7 @@
 
                 <div class="col-12 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center">
                     <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                        <img src="../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
+                        <img src="../../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
 
                             <h5 class="card-title text-dark mb-3">XIAOMI</h5>
@@ -123,7 +123,7 @@
 
                 <div class="col-12 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center">
                     <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                        <img src="../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
+                        <img src="../../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
 
                             <h5 class="card-title text-dark mb-3">XIAOMI</h5>
@@ -138,7 +138,7 @@
 
                 <div class="col-12 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center">
                     <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                        <img src="../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
+                        <img src="../../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
 
                             <h5 class="card-title text-dark mb-3">XIAOMI</h5>
@@ -149,7 +149,7 @@
 
                 <div class="col-12 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center">
                     <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                        <img src="../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
+                        <img src="../../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
 
                             <h5 class="card-title text-dark mb-3">XIAOMI</h5>
@@ -160,7 +160,7 @@
 
                 <div class="col-12 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center">
                     <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                        <img src="../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
+                        <img src="../../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
 
                             <h5 class="card-title text-dark mb-3">XIAOMI</h5>
@@ -171,7 +171,7 @@
 
                 <div class="col-12 col-lg-3 col-md-6 col-sm-12  d-flex justify-content-center">
                     <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                        <img src="../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
+                        <img src="../../../Imagenes/567213_00_1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
 
                             <h5 class="card-title text-dark mb-3">XIAOMI</h5>

@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../sass/custom.css">
+  <link rel="stylesheet" href="../../sass/custom.css">
 </head>
 
 <body>
   <!--Cabecera-->
   <header class="row bg-dark d-flex justify-content-center">
-    <img src="../../Imagenes/logo1.png" id="logo_header">
+    <img src="../../../Imagenes/logo1.png" id="logo_header">
 
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
@@ -29,12 +29,12 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="principal.php">Home |</a>
+            <a class="nav-link" href="../Home/principal.php">Home |</a>
           </li>
 
           <!--Solo usuarios registrados-->
           <li class="nav-item">
-            <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
+            <a class="nav-link" href="../Home/tickets_usuario.php">Mis tickets |</a>
           </li>
 
           <!--Solo usuarios registrados-->
@@ -44,7 +44,7 @@
 
           <!----------------Administración------------------->
           <li class="nav-item">
-            <a class="nav-link" href="admin/admin_index.php">| Administración</a>
+            <a class="nav-link" href="../Admin/admin_index.php">| Administración</a>
           </li>
 
         </ul>
@@ -54,7 +54,7 @@
 
   <div class="container-fluid border d-flex justify-content-center align-items-center vh-100 bg-success">
 
-    <form class="needs-validation border w-25 bg-light text-center fs-5" style="position: absolute; top:35%" novalidate>
+    <form action="../../Controladores/AccountController.php" method="POST" class="needs-validation border w-25 bg-light text-center fs-5" style="position: absolute; top:35%" novalidate>
 
       <!-- Cabecera login-->
       <div class="container bg-dark w-100 p-1 mb-3">
@@ -63,7 +63,7 @@
       <!--Email-->
       <div class="form-group p-2">
         <label class="mb-3"><b>EMAIL</b></label>
-        <input type="email" class="form-control p-2" id="email" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9áéíóúÁÉÍÓÚ_-]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
+        <input type="email" class="form-control p-2" name="email" id="email" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9áéíóúÁÉÍÓÚ_-]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
         <div class="valid-feedback">Campo correcto</div>
         <div class="invalid-feedback">Introduce un email valido</div>
 
@@ -77,13 +77,13 @@
       </div>
       <!--Boton-->
       <div class="form-group mb-3 p-2">
-        <button type="submit" class="btn btn-dark mb-3 w-100"><b class="text-success">Iniciar sesión</b></button>
+        <input type="submit" name="loginSubmit" class="btn btn-dark mb-3 w-100" value="Iniciar sesion"></input>
         <p>¿No tienes cuenta? Registrate <a href="registro.php">aqui</a></p>
       </div>
     </form>
   </div>
 
-  <script src="../js/validacion.js"></script>
+  <script src="../../js/validacion.js"></script>
 </body>
 
 </html>

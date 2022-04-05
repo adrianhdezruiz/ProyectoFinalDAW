@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../sass/custom.css">
+    <link rel="stylesheet" href="../../sass/custom.css">
 </head>
 
 <body class="container-fluid bg-success">
@@ -30,12 +30,12 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="principal.php">Home |</a>
+                        <a class="nav-link" href="../Home/principal.php">Home |</a>
                     </li>
 
                     <!--Solo usuarios registrados-->
                     <li class="nav-item">
-                        <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
+                        <a class="nav-link" href="../Home/tickets_usuario.php">Mis tickets |</a>
                     </li>
 
                     <!--Solo usuarios registrados-->
@@ -45,7 +45,7 @@
 
                     <!----------------Administración------------------->
                     <li class="nav-item">
-                        <a class="nav-link" href="admin/admin_index.php">| Administración</a>
+                        <a class="nav-link" href="../Admin/admin_index.php">| Administración</a>
                     </li>
 
                 </ul>
@@ -70,8 +70,7 @@
 
                 <!--Boton-->
                 <div class="form-group mb-3 mt-3 p-2">
-                    <button type="submit" class="btn btn-dark mb-3 w-100"><b class="text-success">Enviar</b></button>
-
+                    <input type="submit" class="btn btn-dark mb-3 w-100" name="confirmSubmit" value="Confirmar"></input>
                 </div>
         </form>
     </div>
