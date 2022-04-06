@@ -11,7 +11,7 @@ CREATE TABLE `bdd`.`Usuario` (
   `apellidos` VARCHAR(200) NOT NULL,
   `telefono` VARCHAR(15) NOT NULL,
   `email` VARCHAR(255) NOT NULL,
-  `fechaRegistro` TIMESTAMP NOT NULL,
+  `fechaRegistro` DATETIME NOT NULL,
   `contraseña` VARCHAR(100) NOT NULL,
   `codigoRegistro` VARCHAR(45) NULL,
   `confirmado` BIT NOT NULL,
@@ -30,7 +30,7 @@ CREATE TABLE `bdd`.`Usuario` (
 CREATE TABLE `bdd`.`Marca` (
   `idMarca` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(100) NOT NULL,
-  `fechaRegistro` TIMESTAMP NOT NULL,
+  `fechaRegistro` DATETIME NOT NULL,
   PRIMARY KEY (`idMarca`));
 
 
@@ -39,7 +39,7 @@ CREATE TABLE `bdd`.`Modelo` (
   `descripcion` VARCHAR(4000) NOT NULL,
   `imagen` VARCHAR(100) NOT NULL,
   `precioHora` FLOAT NOT NULL,
-  `fechaRegistro` TIMESTAMP NOT NULL,
+  `fechaRegistro` DATETIME NOT NULL,
   `idMarca` INT NOT NULL,
   PRIMARY KEY (`idModelo`),
   INDEX `fk_Modelo_Marca_idx` (`idMarca` ASC) VISIBLE,
@@ -72,7 +72,7 @@ CREATE TABLE `bdd`.`Patin` (
   CREATE TABLE `bdd`.`Servicio` (
   `idServicio` VARCHAR(20) NOT NULL,
   `totalPrecio` FLOAT NOT NULL,
-  `fechaRegistro` TIMESTAMP NOT NULL,
+  `fechaRegistro` DATETIME NOT NULL,
   `horaInicio` TIME NOT NULL,
   `horaFinal` TIME NOT NULL,
   `idUsuario` INT NOT NULL,
