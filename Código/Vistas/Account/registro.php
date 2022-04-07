@@ -68,21 +68,21 @@
                     <!--Nombre-->
                     <div class="form-group p-2 ms-3">
                         <label class="mb-3"><b>NOMBRE</b></label>
-                        <input type="text" class="form-control p-2" id="nombreRegistro" placeholder="Introduce tu nombre" required maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóú'-]*">
+                        <input type="text" class="form-control p-2" name="nombreRegistro" id="nombreRegistro" placeholder="Introduce tu nombre" required maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóú'-]*">
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Solo se permiten letras. No introduzcas espacios</div>
                     </div>
                     <!--Telefono-->
                     <div class="form-group p-2 ms-3">
                         <label class="mb-3"><b>TELEFONO</b></label>
-                        <input type="text" class="form-control p-2" id="telefonoRegistro" placeholder="Introduce tu telefono" pattern="[0-9]*" minlength="9" maxlength="9" required>
+                        <input type="text" class="form-control p-2" name="telefonoRegistro" id="telefonoRegistro" placeholder="Introduce tu telefono" pattern="[0-9]*" minlength="9" maxlength="9" required>
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Introduzca un numero telefónico válido</div>
                     </div>
                     <!--Contraseña-->
                     <div class="form-group p-2 ms-3 mb-1">
                         <label class="mb-3"><b>CONTRASEÑA</b></label>
-                        <input type="password" class="form-control p-2" id="contrasenyaRegistro" placeholder="Introduce tu contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
+                        <input type="password" class="form-control p-2" name="contrasenyaRegistro" id="contrasenyaRegistro" placeholder="Introduce tu contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Mínimo seis caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>
                     </div>
@@ -92,7 +92,7 @@
                     <!--Apellidos-->
                     <div class="form-group p-2 me-3">
                         <label class="mb-3"><b>APELLIDOS</b></label>
-                        <input type="text" class="form-control p-2" id="apellidosRegistro" placeholder="Introduce tus apellidos" maxlength="200" pattern="[ A-Za-zÁÉÍÓÚáéíóú'-]*" required>
+                        <input type="text" class="form-control p-2" name="apellidosRegistro" id="apellidosRegistro" placeholder="Introduce tus apellidos" maxlength="200" pattern="[ A-Za-zÁÉÍÓÚáéíóú'-]*" required>
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Solo se permiten letras</div>
                     </div>
@@ -100,7 +100,7 @@
                     <div class="form-group p-2 me-3">
                         <label class="mb-3"><b>EMAIL</b></label>
 
-                        <input type="email" class="form-control p-2" id="emailRegistro" name="registerEmail" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9áéíóúÁÉÍÓÚ_-]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
+                        <input type="email" class="form-control p-2" id="emailRegistro" name="emailRegistro" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9áéíóúÁÉÍÓÚ_-]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
 
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Introduzca un dominio válido</div>
