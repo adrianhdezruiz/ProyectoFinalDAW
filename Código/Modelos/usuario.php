@@ -1,10 +1,8 @@
 <?php
 
-include '../config/dbconnection.php';
-
 class Usuario
-
 {
+
     //Atributos
 
     private $idUsuario;
@@ -35,7 +33,26 @@ class Usuario
 
     //Metodos
 
-    public function crearUsuario(Usuario $user)
+    public function crearUsuario(Usuario $user, $conn)
     {
+        $sql = "INSERT INTO Usuario (nombre,apellidos,telefono,email,fechaRegistro,contrasenya,codigoRegistro,confirmado,idRol) VALUES(:nombre,:apellidos,:telefono,:email,:fechaRegistro,:contrasenya,:codigoRegistro,:confirmado,:idRol)";
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->bindParam(':nombre', $user->nombre);
+        $stmt->bindParam(':apellidos', $user->apellidos);
+        $stmt->bindParam(':telefono', $user->telefono);
+        $stmt->bindParam(':email', $user->email);
+        $stmt->bindParam(':fechaRegistro', $user->fechaRegistro);
+        $stmt->bindParam(':contrasenya', $user->contrasenya);
+        $stmt->bindParam(':codigoRegistro', $user->codigoRegistro);
+        $stmt->bindParam(':confirmado', $user->confirmado);
+        $stmt->bindParam(':idRol', $user->idRol);
+
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
