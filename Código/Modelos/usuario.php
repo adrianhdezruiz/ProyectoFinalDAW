@@ -17,6 +17,9 @@ class Usuario
     public $idRol;
 
     //Constructor
+    public function __construct()
+    {
+    }
 
     public function __construct($nombre, $apellidos, $telefono, $email, $fechaRegistro, $contrasenya, $codigoRegistro, $confirmado, $idRol)
     {
@@ -54,5 +57,10 @@ class Usuario
         } else {
             return false;
         }
+    }
+
+
+    public function obtenerUsuario($id, $conn)
+    {
     }
 }

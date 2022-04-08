@@ -13,7 +13,7 @@
 
     <!--Cabecera-->
     <header class="row bg-dark d-flex justify-content-center">
-        <img src="../../Imagenes/logo1.png" id="logo_header">
+        <img src="../../../Imagenes/logo1.png" id="logo_header">
 
         <!-- Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
@@ -53,27 +53,39 @@
         </nav>
     </header>
 
-    <!--REDIRECCIONAR A MAIN-->
+    <main class="row border bg-light w-50 mt-5" style="margin: auto;">
+        <div class="col-12 bg-dark text-success text-center p-2 fs-4 w-100">CONFIRMAR REGISTRO</div>
 
-    <div class="container-fluid border d-flex justify-content-center align-items-center vh-100 bg-success">
+        <div class="row ">
+            <div class="col-2"><input type="text" name="cod1" id="cod1" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod2" id="cod2" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod3" id="cod3" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod4" id="cod4" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod5" id="cod5" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod6" id="cod6" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+        </div>
 
-        <form class="border w-25 bg-light text-center fs-5" style="position: absolute; top:35%">
+        <input type="submit" value="Confirmar" name="confirmSubmit" class="form-control bg-dark text-success fs-5">
 
-            <div class="container bg-dark w-100 p-1 mb-3">
-                <p class="text-success text-center"><b>CONFIRMAR REGISTRO</b></p>
-            </div>
+    </main>
 
-            <div class="form-group p-2">
-                <label class="mb-3"><b>CODIGO</b></label>
-                <input type="text" class="form-control p-2" id="email" aria-describedby="emailHelp" placeholder="Introduce el código enviado a tu correo">
-                <span id="error"></span>
+    <div></div>
 
-                <!--Boton-->
-                <div class="form-group mb-3 mt-3 p-2">
-                    <input type="submit" class="btn btn-dark mb-3 w-100" name="confirmSubmit" value="Confirmar"></input>
-                </div>
-        </form>
-    </div>
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            var i = 1;
+            $('#cod1').focus();
+
+            $('input').keypress(function() {
+                i++;
+                $('#cod' + i).focus();
+                //e.target.id
+
+            })
+        })
+    </script>
 
 </body>
 

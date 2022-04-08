@@ -49,3 +49,15 @@ if (!empty($_POST['loginSubmit'])) {
 
     //password_verify();
 }
+
+//CONFIRMAR REGISTRO
+
+if (!empty($_POST['confirmSubmit'])) {
+
+    if (isset($_SESSION['userId'])) {
+
+        $cod = $_POST['cod1'] . $_POST['cod2'] . $_POST['cod3'] . $_POST['cod4'] . $_POST['cod5'] . $_POST['cod6'];
+
+        $id = $_SESSION['userId'];
+    }
+}
