@@ -4,6 +4,7 @@ include '../config/dbconnection.php';
 include '../librerias/PHPMailer-master/mail.php';
 require_once '../Modelos/usuario.php';
 
+session_start();
 
 //REGISTRO
 
@@ -23,14 +24,14 @@ if (!empty($_POST['registerSubmit'])) {
 
     //Instancia clase usuario
 
-    $user = new Usuario($nombre, $apellidos, $telefono, $email, $fechaRegistro, $contrasenya, $codigoRegistro, $confirmado, $idRol);
+    $user = new Usuario();
+    $user->construct1($nombre, $apellidos, $telefono, $email, $fechaRegistro, $contrasenya, $codigoRegistro, $confirmado, $idRol);
 
     try {
 
         //Introducir usuario en la base de datos
         $user->crearUsuario($user, $conn);
 
-        session_start();
         $_SESSION["userId"] = $conn->lastInsertId();
 
         //Enviar codigo de registro por correo
@@ -48,6 +49,7 @@ if (!empty($_POST['registerSubmit'])) {
 if (!empty($_POST['loginSubmit'])) {
 
     //password_verify();
+
 }
 
 //CONFIRMAR REGISTRO
@@ -56,8 +58,21 @@ if (!empty($_POST['confirmSubmit'])) {
 
     if (isset($_SESSION['userId'])) {
 
+        $id = $_SESSION['userId'];
+
         $cod = $_POST['cod1'] . $_POST['cod2'] . $_POST['cod3'] . $_POST['cod4'] . $_POST['cod5'] . $_POST['cod6'];
 
-        $id = $_SESSION['userId'];
+        $user = new Usuario();
+
+        if (!is_null($user->obtenerUsuario($id, $conn))) {
+            $result = $user->obtenerUsuario($id, $conn);
+
+            if ($result['codigoRegistro'] == $cod) {
+                //
+            } else {
+                echo "<script>alert('El código introducido no es correcto')</script>";
+                echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/confirmar_registro.php';\",0);</script>";
+            }
+        }
     }
 }

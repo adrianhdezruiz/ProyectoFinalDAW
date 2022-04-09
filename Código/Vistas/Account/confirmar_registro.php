@@ -53,19 +53,20 @@
         </nav>
     </header>
 
-    <main class="row border bg-light w-50 mt-5" style="margin: auto;">
-        <div class="col-12 bg-dark text-success text-center p-2 fs-4 w-100">CONFIRMAR REGISTRO</div>
+    <main class="row  bg-success w-50 mt-5 d-flex justify-content-center" style="margin: auto;">
+        <div class="col-12 w-75 bg-dark text-success text-center p-2 fs-4  ">CONFIRMAR REGISTRO</div>
 
-        <div class="row ">
-            <div class="col-2"><input type="text" name="cod1" id="cod1" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
-            <div class="col-2"><input type="text" name="cod2" id="cod2" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
-            <div class="col-2"><input type="text" name="cod3" id="cod3" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
-            <div class="col-2"><input type="text" name="cod4" id="cod4" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
-            <div class="col-2"><input type="text" name="cod5" id="cod5" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
-            <div class="col-2"><input type="text" name="cod6" id="cod6" maxlength="1" class="text-center m-3 w-100  border border-4 fs-4" style="height: 5rem;"></div>
-        </div>
+        <form class="row w-75 border bg-light d-flex justify-content-center" action="../../Controladores/AccountController.php" method="POST">
+            <div class="col-2"><input type="text" name="cod1" id="cod1" maxlength="1" class="text-center mb-4 mt-4 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod2" id="cod2" maxlength="1" class="text-center mb-4 mt-4 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod3" id="cod3" maxlength="1" class="text-center mb-4 mt-4 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod4" id="cod4" maxlength="1" class="text-center mb-4 mt-4 w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod5" id="cod5" maxlength="1" class="text-center mb-4 mt-4  w-100  border border-4 fs-4" style="height: 5rem;"></div>
+            <div class="col-2"><input type="text" name="cod6" id="cod6" maxlength="1" class="text-center mb-4 mt-4 w-100  border border-4 fs-4" style="height: 5rem;"></div>
 
-        <input type="submit" value="Confirmar" name="confirmSubmit" class="form-control bg-dark text-success fs-5">
+            <input type="submit" value="Confirmar" name="confirmSubmit" class="form-control bg-dark text-success fs-5" style="border: none;">
+
+        </form>
 
     </main>
 

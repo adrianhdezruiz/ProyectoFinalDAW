@@ -17,11 +17,13 @@ class Usuario
     public $idRol;
 
     //Constructor
-    public function __construct()
+
+    public function construct0()
     {
     }
 
-    public function __construct($nombre, $apellidos, $telefono, $email, $fechaRegistro, $contrasenya, $codigoRegistro, $confirmado, $idRol)
+
+    public function construct1($nombre, $apellidos, $telefono, $email, $fechaRegistro, $contrasenya, $codigoRegistro, $confirmado, $idRol)
     {
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
@@ -61,6 +63,24 @@ class Usuario
 
 
     public function obtenerUsuario($id, $conn)
+    {
+        $sql = "SELECT * FROM Usuario WHERE idUsuario = :id";
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+
+        if ($stmt->execute()) {
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $result;
+        } else {
+            return null;
+        }
+    }
+
+    public function editarUsuario($id, $campo, $valor, $conn)
     {
     }
 }
