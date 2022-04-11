@@ -96,4 +96,19 @@ class Usuario
             return false;
         }
     }
+
+    public function eliminarUsuario($id, $conn)
+    {
+        $sql = "DELETE FROM Usuario WHERE idUsuario = :id";
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
