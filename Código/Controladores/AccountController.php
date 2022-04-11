@@ -37,7 +37,7 @@ if (!empty($_POST['registerSubmit'])) {
         //Enviar codigo de registro por correo
         sendMail($email, $codigoRegistro, $nombre, $apellidos);
 
-        header("Location: ../Vistas/Home/principal.php");
+        header("Location: ../Vistas/Account/confirmar_registro.php");
     } catch (\Throwable $th) {
         echo "<script>alert('El registro ha fallado. Vuelva a intentarlo, si el problema persiste contacte con el administrador')</script>";
         echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/registro.php';\",0);</script>";
@@ -68,7 +68,11 @@ if (!empty($_POST['confirmSubmit'])) {
             $result = $user->obtenerUsuario($id, $conn);
 
             if ($result['codigoRegistro'] == $cod) {
-                //
+
+                if ($user->editarUsuario($id, "confirmado", 1, $conn)) {
+                    echo "<script>alert('Su cuenta ha sido verificada con éxito')</script>";
+                    echo "<script>setTimeout(\"document.location.href = '../Vistas/Home/principal.php';\",0);</script>";
+                }
             } else {
                 echo "<script>alert('El código introducido no es correcto')</script>";
                 echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/confirmar_registro.php';\",0);</script>";

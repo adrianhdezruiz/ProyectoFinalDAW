@@ -82,5 +82,18 @@ class Usuario
 
     public function editarUsuario($id, $campo, $valor, $conn)
     {
+        $sql = "UPDATE Usuario SET $campo = :valor WHERE idUsuario = :id";
+
+        $stmt = $conn->prepare($sql);
+
+
+        $stmt->bindParam(':valor', $valor);
+        $stmt->bindParam(':id', $id);
+
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
