@@ -36,27 +36,35 @@ if (isset($_SESSION['userId'])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="login.php">Login | </a>
-                    </li>
+                    <?php if (!isset($_SESSION['userId'])) { ?>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="login.php">Login | </a>
+                        </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="registro.php">Registro | </a>
-                    </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="registro.php">Registro | </a>
+                        </li>
+                    <?php } ?>
                     <li class="nav-item">
                         <a class="nav-link" href="../Home/principal.php">Home |</a>
                     </li>
 
                     <!--Solo usuarios registrados-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Home/tickets_usuario.php">Mis tickets |</a>
-                    </li>
+                    <?php if (isset($_SESSION['userId'])) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/perfil_usuario.php">Mi perfil |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/tickets_usuario.php">Mis tickets |</a>
+                        </li>
+                    <?php } ?>
 
                     <!----------------Administración------------------->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Admin/admin_index.php">Administración</a>
-                    </li>
+                    <?php if (isset($_SESSION['userId']) && $currentUser['idRol'] == 1) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Admin/admin_index.php">Administración</a>
+                        </li>
+                    <?php } ?>
 
                 </ul>
                 <!--Solo usuarios registrados-->

@@ -1,3 +1,31 @@
+<?php
+
+include '../../config/dbconnection.php';
+require_once '../../Modelos/usuario.php';
+
+session_start();
+
+$user = new Usuario();
+
+if (isset($_SESSION['userId'])) {
+    $id = $_SESSION['userId'];
+    $currentUser = $user->obtenerUsuario("idUsuario", $id, $conn);
+
+    if ($currentUser['idRol'] == 1) {
+
+        //Si el usuario es administrador comprobar que la cuenta este verificada
+        if ($currentUser['confirmado'] == 0) {
+            header("Location: ../Account/confirmar_registro.php");
+        }
+    } else {
+        //Usuario no autorizado para acceder a administración
+        header('HTTP/1.0 403 Forbidden');
+        die("<h1>403 Acceso denegado</h1><br><p style='font-size: 1.5rem;'>No tienes permiso para acceder a este recurso.</p><hr>");
+    }
+} else {
+    header("Location: ../Account/login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,35 +47,53 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
+                    <?php if (!isset($_SESSION['userId'])) { ?>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../Account/login.php">Login | </a>
+                        </li>
 
-                    <li class="nav-item active">
-                        <a class="nav-link" href="../Account/login.php">Login | </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Account/registro.php">Registro | </a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Account/registro.php">Registro | </a>
+                        </li>
+                    <?php } ?>
 
                     <li class="nav-item">
                         <a class="nav-link" href="../Home/principal.php">Home |</a>
                     </li>
 
                     <!--Solo usuarios registrados-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Home/tickets_usuario.php">Mis tickets |</a>
-                    </li>
+                    <?php if (isset($_SESSION['userId'])) { ?>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/perfil_usuario.php">Mi perfil |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Home/tickets_usuario.php">Mis tickets |</a>
+                        </li>
+                    <?php } ?>
 
-                    <!--Solo usuarios registrados-->
-                    <li class="nav-item">
-                        <a class="nav-link" href="../Account/login.php">Cerrar sesión</a>
-                    </li>
+                    <?php if (isset($_SESSION['userId']) && $currentUser['idRol'] == 1) { ?>
+                        <!----------------Administración------------------->
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin_index.php">Administración</a>
+                        </li>
+                    <?php } ?>
 
-                    <!----------------Administración------------------->
-                    <li class="nav-item">
-                        <a class="nav-link" href="admin_index.php">| Administración</a>
-                    </li>
 
                 </ul>
+                <!--Solo usuarios registrados-->
+                <?php if (isset($_SESSION['userId'])) { ?>
+                    <ul class="navbar-nav ms-auto ">
+
+                        <li class="nav-item p-1">
+                            <a class="nav-link " href="#"><?= $currentUser['email'] ?> |</a>
+                        </li>
+                        <li class="nav-item  d-flex align-items-center ">
+                            <form action="../../Controladores/AccountController.php" method="POST">
+                                <input type="submit" name="logoutSubmit" value="Cerrar sesión" class="bg-light nav-link" style="border: none;">
+                            </form>
+                        </li>
+                    </ul>
+                <?php } ?>
             </div>
         </nav>
     </header>
@@ -299,15 +345,15 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Email</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Email"></div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Email" readonly></div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Fecha Registro</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Fecha registro"></div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Fecha registro" readonly></div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Rol</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Rol"></div>
+                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Rol" readonly></div>
                 </div>
 
                 <div class="row">

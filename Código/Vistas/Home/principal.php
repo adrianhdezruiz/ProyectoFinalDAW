@@ -41,15 +41,15 @@ if (isset($_SESSION['userId'])) {
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
+                        <?php if (!isset($_SESSION['userId'])) { ?>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="../Account/login.php">Login | </a>
+                            </li>
 
-                        <li class="nav-item active">
-                            <a class="nav-link" href="../Account/login.php">Login | </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="../Account/registro.php">Registro | </a>
-                        </li>
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Account/registro.php">Registro | </a>
+                            </li>
+                        <?php } ?>
                         <li class="nav-item">
                             <a class="nav-link" href="principal.php">Home |</a>
                         </li>
@@ -57,14 +57,17 @@ if (isset($_SESSION['userId'])) {
                         <?php if (isset($_SESSION['userId'])) { ?>
                             <!--Solo usuarios registrados-->
                             <li class="nav-item">
-                                <a class="nav-link" href="tickets_usuario.php">Mis tickets </a>
+                                <a class="nav-link" href="perfil_usuario.php">Mi perfil |</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
                             </li>
                         <?php } ?>
 
                         <?php if (isset($_SESSION['userId']) && $currentUser['idRol'] == 1) { ?>
                             <!----------------Administración------------------->
                             <li class="nav-item">
-                                <a class="nav-link" href="../Admin/admin_index.php">| Administración</a>
+                                <a class="nav-link" href="../Admin/admin_index.php"> Administración</a>
                             </li>
                         <?php } ?>
 
