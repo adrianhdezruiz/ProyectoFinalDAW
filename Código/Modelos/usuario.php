@@ -62,13 +62,13 @@ class Usuario
     }
 
 
-    public function obtenerUsuario($id, $conn)
+    public function obtenerUsuario($campo, $valor, $conn)
     {
-        $sql = "SELECT * FROM Usuario WHERE idUsuario = :id";
+        $sql = "SELECT * FROM Usuario WHERE $campo = :valor";
 
         $stmt = $conn->prepare($sql);
 
-        $stmt->bindParam(':id', $id);
+        $stmt->bindParam(':valor', $valor);
 
         if ($stmt->execute()) {
 

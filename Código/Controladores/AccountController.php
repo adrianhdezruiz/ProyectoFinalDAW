@@ -37,7 +37,7 @@ if (!empty($_POST['registerSubmit'])) {
         //Enviar codigo de registro por correo
         sendMail($email, $codigoRegistro, $nombre, $apellidos);
 
-        header("Location: ../Vistas/Account/confirmar_registro.php");
+        header("Location: ../Vistas/Home/principal.php");
     } catch (\Throwable $th) {
         echo "<script>alert('El registro ha fallado. Vuelva a intentarlo, si el problema persiste contacte con el administrador')</script>";
         echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/registro.php';\",0);</script>";
@@ -48,8 +48,36 @@ if (!empty($_POST['registerSubmit'])) {
 
 if (!empty($_POST['loginSubmit'])) {
 
-    //password_verify();
+    //Comprobar si email existe
 
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $contrasenya = $_POST['contrasenya'];
+
+    $user = new Usuario();
+
+    $result = $user->obtenerUsuario("email", $email, $conn);
+
+    if (!$result == null) {
+
+        if (password_verify($contrasenya, $result['contrasenya'])) {
+            $_SESSION['userId'] = $result['idUsuario'];
+            echo "<script>setTimeout(\"document.location.href = '../Vistas/Home/principal.php';\",0);</script>";
+        } else {
+            echo "<script>alert('La contraseña introducida no es correcta')</script>";
+            echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/login.php';\",0);</script>";
+        }
+    } else {
+        echo "<script>alert('El email introducido no se encuentra registrado')</script>";
+        echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/login.php';\",0);</script>";
+    }
+}
+
+//LOGOUT
+
+if (!empty($_POST['logoutSubmit'])) {
+
+    session_destroy();
+    header("Location: ../Vistas/Account/login.php");
 }
 
 //CONFIRMAR REGISTRO
@@ -64,8 +92,8 @@ if (!empty($_POST['confirmSubmit'])) {
 
         $user = new Usuario();
 
-        if (!is_null($user->obtenerUsuario($id, $conn))) {
-            $result = $user->obtenerUsuario($id, $conn);
+        if (!is_null($user->obtenerUsuario("idUsuario", $id, $conn))) {
+            $result = $user->obtenerUsuario("idUsuario", $id, $conn);
 
             if ($result['codigoRegistro'] == $cod) {
 
