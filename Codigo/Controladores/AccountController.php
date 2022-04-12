@@ -39,8 +39,13 @@ if (!empty($_POST['registerSubmit'])) {
 
         header("Location: ../Vistas/Home/principal.php");
     } catch (\Throwable $th) {
-        echo "<script>alert('El registro ha fallado. Vuelva a intentarlo, si el problema persiste contacte con el administrador')</script>";
-        echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/registro.php';\",0);</script>";
+        if (!is_null($user->obtenerUsuario("email", $email, $conn))) {
+            echo "<script>alert('El email introducido ya se encuentra registrado')</script>";
+            echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/registro.php';\",0);</script>";
+        } else {
+            echo "<script>alert('El registro ha fallado. Vuelva a intentarlo, si el problema persiste contacte con el administrador')</script>";
+            echo "<script>setTimeout(\"document.location.href = '../Vistas/Account/registro.php';\",0);</script>";
+        }
     }
 }
 

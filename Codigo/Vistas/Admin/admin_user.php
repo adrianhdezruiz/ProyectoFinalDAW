@@ -368,7 +368,8 @@ if (isset($_SESSION['userId'])) {
 
     </main>
 
-
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/AJAX/admin_user.js"></script>
 </body>
 
 </html>

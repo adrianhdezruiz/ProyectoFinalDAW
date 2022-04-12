@@ -62,6 +62,7 @@ class Usuario
     }
 
 
+
     public function obtenerUsuario($campo, $valor, $conn)
     {
         $sql = "SELECT * FROM Usuario WHERE $campo = :valor";
@@ -69,6 +70,24 @@ class Usuario
         $stmt = $conn->prepare($sql);
 
         $stmt->bindParam(':valor', $valor);
+
+        if ($stmt->execute()) {
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $result;
+        } else {
+            return null;
+        }
+    }
+
+
+    public function obtenerUsuarios($conn)
+    {
+        $sql = "SELECT * FROM Usuario";
+
+        $stmt = $conn->prepare($sql);
+
 
         if ($stmt->execute()) {
 
