@@ -100,124 +100,16 @@ if (isset($_SESSION['userId'])) {
 
     <main class=" w-75 " style="margin: auto;">
         <h1 class="text-success fw-bold text-center m-4">USUARIOS</h1>
+        <h2 class="text-success fw-bold text-center m-4">TOTAL USUARIOS: <span id="totalUsuarios"></span></h2>
 
-        <div class="row fs-5">
-            <div class="col-12 border bg-light">
+        <!--Panel añadir usuario-->
 
-                <div class="row d-flex text-center p-2 " style="border-bottom: 3px outset grey; ">
-                    <div class="col-lg-3 p-1">
-                        <a href="">+ Añadir usuario</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination pagination-lg justify-content-center align-items-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Siguiente</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="col-lg-3  fs-5">
-                        <input type="text" class="p-1 rounded rounded-3" style="width: 80%; position:relative;top:7%" placeholder="Buscar usuario por correo">
-                        <button class="btn btn-success">Buscar</button>
-
-                    </div>
-                </div>
-
-
-
-                <div class="row d-flex text-center p-2 " style="border-bottom: 2px outset grey; ">
-                    <div class="col-4 p-1">1</div>
-                    <div class="col-4">user@gmail.com</div>
-                    <div class="col-4">
-                        <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                        <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                        <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-                    </div>
-                </div>
-
-                <div class="row d-flex text-center p-2 " style="border-bottom: 2px outset grey; ">
-                    <div class="col-4 p-1">2</div>
-                    <div class="col-4">user@gmail.com</div>
-                    <div class="col-4">
-                        <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                        <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                        <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-                    </div>
-                </div>
-
-
-                <div class="row d-flex text-center p-2 " style="border-bottom: 2px outset grey; ">
-                    <div class="col-4 p-1">3</div>
-                    <div class="col-4">user@gmail.com</div>
-                    <div class="col-4">
-                        <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                        <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                        <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-                    </div>
-                </div>
-
-
-                <div class="row d-flex text-center p-2 " style="border-bottom: 2px outset grey; ">
-                    <div class="col-4 p-1">4</div>
-                    <div class="col-4">user@gmail.com</div>
-                    <div class="col-4">
-                        <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                        <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                        <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-                    </div>
-                </div>
-
-                <div class="row d-flex text-center p-2 " style="border-bottom: 2px outset grey; ">
-                    <div class="col-4 p-1">5</div>
-                    <div class="col-4">user@gmail.com</div>
-                    <div class="col-4">
-                        <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                        <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                        <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-                    </div>
-                </div>
-
-                <div class="row d-flex text-center p-2 " style="border-bottom: 2px outset grey; ">
-                    <div class="col-4 p-1">6</div>
-                    <div class="col-4">user@gmail.com</div>
-                    <div class="col-4">
-                        <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                        <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                        <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-                    </div>
-                </div>
-
-                <div class="row d-flex text-center p-2 " style="border-bottom: 2px outset grey; ">
-                    <div class="col-4 p-1">7</div>
-                    <div class="col-4">user@gmail.com</div>
-                    <div class="col-4">
-                        <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                        <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                        <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-        </div>
-
-        <!--Panel que se mostrará cuando el administrador seleccione Añadir usuario-->
-        <!-- Los usuarios creados por el administrador no requieren de confirmación-->
 
         <div class="row mt-5">
             <div class="col-12 border text-success fs-4">
                 <div class="row">
                     <!--Icono cerrar-->
-                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
+                    <div class="col-12 border bg-secondary" style="text-align:end; ">.</div>
 
                 </div>
 
@@ -264,6 +156,37 @@ if (isset($_SESSION['userId'])) {
 
         </div>
 
+        <!--Tabla usuarios-->
+
+        <div class="row fs-5 mt-5">
+            <div class="col-12 border bg-light">
+
+                <div class="row d-flex text-center p-2 " style="border-bottom: 3px outset grey; ">
+                    <div class="col-lg-3 p-1">
+                        <input type="number" class="form-inline p-1 w-25" id="usuariosPagina" min="1" max="99">
+                        <input type="button" id="submitUsuariosPagina" class="form-inline bg-success p-1" style="border:none" value="Usuarios por pagina">
+                    </div>
+                    <div class="col-lg-6">
+
+                        <ul class="pagination pagination-lg justify-content-center align-items-center" id="pag">
+
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-3  fs-5">
+                        <input type="text" class="p-1 rounded rounded-3" style="width: 80%; position:relative;top:7%" placeholder="Buscar usuario por correo">
+                        <button class="btn btn-success">Buscar</button>
+
+                    </div>
+                </div>
+
+                <!--USUARIOS-->
+                <div id="usuarios">
+
+                </div>
+            </div>
+
+        </div>
 
         <!--Panel que se mostrará cuando el administrador seleccione Editar-->
 
