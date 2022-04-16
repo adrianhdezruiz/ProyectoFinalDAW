@@ -102,55 +102,58 @@ if (isset($_SESSION['userId'])) {
         <h1 class="text-success fw-bold text-center m-4">USUARIOS</h1>
         <h2 class="text-success fw-bold text-center m-4">TOTAL USUARIOS: <span id="totalUsuarios"></span></h2>
 
-        <!--Panel añadir usuario-->
+        <span id="result">
 
+
+        </span>
+        <!--Panel añadir usuario-->
 
         <div class="row mt-5">
             <div class="col-12 border text-success fs-4">
                 <div class="row">
-                    <!--Icono cerrar-->
+
                     <div class="col-12 border bg-secondary" style="text-align:end; ">.</div>
 
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Nombre</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nombre"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Apellidos</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce apellido"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Telefono</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce telefono"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Email</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce email"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Rol</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white">
-                        <select class="form-select fs-4" style="border:none" aria-label="Default select example">
-                            <option value="1">Admin</option>
-                            <option value="2">Usuario</option>
-
-                        </select>
+                <form method="POST" id="adminAddUser">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Nombre</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce nombre" id="adminNombre" maxlength="50" required pattern="[A-Za-zñÑÁÉÍÓÚáéíóú'-]*"></div>
                     </div>
-                </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Apellidos</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce apellidos" id="adminApellidos" maxlength="200" required pattern="[ A-Za-zñÑÁÉÍÓÚáéíóú'-]*"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Telefono</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce telefono" id="adminTelefono" minlength="9" maxlength="9" required pattern="[0-9]*"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Email</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="email" style="width: 100%;height:100%; border:none " placeholder="Introduce email" id="adminEmail" maxlength="255" required></div>
+                    </div>
 
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Contraseña</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce contraseña"></div>
-                </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Rol</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white">
+                            <select class="form-select fs-4" id="adminRol" style="border:none" aria-label="Default select example">
+                                <option value="1">Admin</option>
+                                <option value="2">Usuario</option>
 
-                <div class="row">
+                            </select>
+                        </div>
+                    </div>
 
-                    <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="exampleInputEmail1" value="AÑADIR USUARIO"></div>
-                </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Contraseña</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="password" style="width: 100%;height:100%; border:none " placeholder="Introduce contraseña" id="adminContrasenya" minlength="6" maxlength="20" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"></div>
+                    </div>
 
+                    <div class="row">
+
+                        <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="adminAddUserSubmit" value="AÑADIR USUARIO"></div>
+                    </div>
+                </form>
 
             </div>
 
@@ -174,120 +177,29 @@ if (isset($_SESSION['userId'])) {
 
                     </div>
                     <div class="col-lg-3  fs-5">
-                        <input type="text" class="p-1 rounded rounded-3" style="width: 80%; position:relative;top:7%" placeholder="Buscar usuario por correo">
-                        <button class="btn btn-success">Buscar</button>
+                        <input type="text" class="p-1 rounded rounded-3" style="width: 80%; position:relative;top:7%" placeholder="Buscar usuario por correo" id="searchInput">
+                        <button class="btn btn-success" id="search">Buscar</button>
+                        <span class="text-danger me-5" id="searchError"></span>
 
                     </div>
                 </div>
 
                 <!--USUARIOS-->
+                <div id="display">
+
+                </div>
                 <div id="usuarios">
 
                 </div>
-            </div>
 
-        </div>
-
-        <!--Panel que se mostrará cuando el administrador seleccione Editar-->
-
-        <div class="row mt-5">
-            <div class="col-12 border text-success fs-4">
-                <div class="row">
-                    <!--Icono cerrar-->
-                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2 fw-bold">Id</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Id" readonly></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Nombre</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nuevo nombre"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Apellidos</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nuevo apellido"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Telefono</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nuevo telefono"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Email</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce nuevo email"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Rol</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white">
-                        <select class="form-select fs-4" style="border:none" aria-label="Default select example">
-                            <option value="1">Admin</option>
-                            <option value="2">Usuario</option>
-
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="exampleInputEmail1" value="CONFIRMAR EDICION"></div>
-                </div>
 
 
             </div>
 
         </div>
 
-        <!--Panel que se mostrará cuando el administrador seleccione Ver-->
-
-        <div class="row mt-5">
-            <div class="col-12 border text-success fs-4">
-                <div class="row">
-                    <!--Icono cerrar-->
-                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2 fw-bold">Id</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Id" readonly></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Nombre</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Nombre" readonly></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Apellidos</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Apellido" readonly></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Telefono</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Telefono" readonly></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Email</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Email" readonly></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Fecha Registro</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Fecha registro" readonly></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Rol</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Rol" readonly></div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-12 border bg-secondary"> .</div>
-                </div>
 
 
-            </div>
-
-        </div>
 
     </main>
 

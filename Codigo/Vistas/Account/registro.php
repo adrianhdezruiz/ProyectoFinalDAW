@@ -103,7 +103,7 @@ if (isset($_SESSION['userId'])) {
                     <!--Nombre-->
                     <div class="form-group p-2 ms-3">
                         <label class="mb-3"><b>NOMBRE</b></label>
-                        <input type="text" class="form-control p-2" name="nombreRegistro" id="nombreRegistro" placeholder="Introduce tu nombre" required maxlength="50" pattern="[A-Za-zÁÉÍÓÚáéíóú'-]*">
+                        <input type="text" class="form-control p-2" name="nombreRegistro" id="nombreRegistro" placeholder="Introduce tu nombre" required maxlength="50" pattern="[A-Za-ñÑzÁÉÍÓÚáéíóú'-]*">
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Solo se permiten letras. No introduzcas espacios</div>
                     </div>
@@ -127,7 +127,7 @@ if (isset($_SESSION['userId'])) {
                     <!--Apellidos-->
                     <div class="form-group p-2 me-3">
                         <label class="mb-3"><b>APELLIDOS</b></label>
-                        <input type="text" class="form-control p-2" name="apellidosRegistro" id="apellidosRegistro" placeholder="Introduce tus apellidos" maxlength="200" pattern="[ A-Za-zÁÉÍÓÚáéíóú'-]*" required>
+                        <input type="text" class="form-control p-2" name="apellidosRegistro" id="apellidosRegistro" placeholder="Introduce tus apellidos" maxlength="200" pattern="[ A-Za-zñÑÁÉÍÓÚáéíóú'-]*" required>
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Solo se permiten letras</div>
                     </div>
@@ -135,7 +135,7 @@ if (isset($_SESSION['userId'])) {
                     <div class="form-group p-2 me-3">
                         <label class="mb-3"><b>EMAIL</b></label>
 
-                        <input type="email" class="form-control p-2" id="emailRegistro" name="emailRegistro" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9áéíóúÁÉÍÓÚ_-.]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
+                        <input type="email" class="form-control p-2" id="emailRegistro" name="emailRegistro" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ_-.]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
 
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Introduzca un dominio válido</div>
