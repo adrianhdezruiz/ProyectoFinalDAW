@@ -10,12 +10,16 @@ session_start();
 $marca = new Marca();
 $result = $marca->obtenerMarcas($conn);
 
+//Array que por cada marca guarda la cantidad de modelos y de patines que tiene
 
 $countArr = [];
 
 foreach ($result as $key => $value) {
+
     $id = $value["idMarca"];
+
     $count = new Count($id, $conn);
+
     $arr = array(
         'numModelos' => $count->numModelos[0],
         'numPatines' => $count->numPatines[0],

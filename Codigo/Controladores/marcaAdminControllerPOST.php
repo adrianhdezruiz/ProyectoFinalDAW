@@ -25,6 +25,33 @@ switch ($_POST['idAccion']) {
             echo 0;
         }
         break;
+    case 2:
+
+        $id = $_POST['idMarca'];
+        $nombre = htmlspecialchars(strip_tags($_POST['nuevoNombre']));
+
+        $marca = new Marca();
+        try {
+            $marca->editarMarca($id, "nombre", $nombre, $conn);
+            echo 1;
+        } catch (\Throwable $th) {
+            echo 0;
+        }
+
+        break;
+
+    case 3:
+
+        $id = $_POST["idMarca"];
+
+        $marca = new Marca();
+        try {
+            $marca->eliminarMarca($id, $conn);
+            echo 1;
+        } catch (\Throwable $th) {
+            echo 0;
+        }
+        break;
 
     default:
         # code...

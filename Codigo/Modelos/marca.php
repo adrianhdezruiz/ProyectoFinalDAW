@@ -46,6 +46,24 @@ class Marca
         }
     }
 
+    public function obtenerMarca($campo, $valor, $conn)
+    {
+        $sql = "SELECT * FROM Marca WHERE $campo = :valor";
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->bindParam(':valor', $valor);
+
+        if ($stmt->execute()) {
+
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+            return $result;
+        } else {
+            return null;
+        }
+    }
+
 
     public function obtenerMarcas($conn)
     {
@@ -61,6 +79,41 @@ class Marca
             return $result;
         } else {
             return null;
+        }
+    }
+
+
+    public function editarMarca($id, $campo, $valor, $conn)
+    {
+
+        $sql = "UPDATE Marca SET $campo = :valor WHERE idMarca = :id";
+
+        $stmt = $conn->prepare($sql);
+
+
+        $stmt->bindParam(':valor', $valor);
+        $stmt->bindParam(':id', $id);
+
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function eliminarMarca($id, $conn)
+    {
+
+        $sql = "DELETE FROM Marca WHERE idMarca = :id";
+
+        $stmt = $conn->prepare($sql);
+
+        $stmt->bindParam(':id', $id);
+
+        if ($stmt->execute()) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
