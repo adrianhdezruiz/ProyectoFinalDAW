@@ -3,8 +3,6 @@
 class Count
 {
 
-
-    public $idMarca;
     public $numModelos;
     public $numPatines;
 
