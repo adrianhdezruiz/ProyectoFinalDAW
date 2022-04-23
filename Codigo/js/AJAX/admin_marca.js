@@ -38,7 +38,30 @@ $(document).ready(function(){
 
 //AÑADIR MARCA
 
-$('#addMarcaBtn').click(function(response){
+$('#addMarcaLink').click(function(e){
+
+
+    e.preventDefault();
+    $('#addMarcaPanel').empty();
+
+    var html = `
+    <div class="col-10">
+        <input type="text" class="form-control mt-2" id="addMarca" placeholder="Crea una nueva marca" style="height: 3rem;" maxlength="100" required>
+    </div>
+    <div class="col-2">
+        <input type="button" id="addMarcaBtn" class="btn btn-success form-inline mt-1" value="Añadir" style="height: 3rem;">
+        <button id="cerrarAddMarcaBtn" class="btn btn-danger form-inline mt-1 text-white" style="height: 3rem;width:4rem">X</button>
+    </div>`
+
+    $('#addMarcaPanel').append(html);
+
+
+$(document).on('click','#cerrarAddMarcaBtn',function(){
+
+    $('#addMarcaPanel').empty();
+})    
+
+$(document).on('click','#addMarcaBtn',function(){
 
 
     const data = {
@@ -65,6 +88,8 @@ $('#addMarcaBtn').click(function(response){
         }
     })
 })
+})
+
 
 //EDITAR
 

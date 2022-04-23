@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../../Fuentes/Segoe\ UI.ttf);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Segoe UI';
+  font-family: 'SegoeUI';
 }
 
 #logo_header {
@@ -16,6 +21,8 @@
 #actualizarTicketsActivos:hover {
   cursor: pointer;
 }
+
+
 
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)

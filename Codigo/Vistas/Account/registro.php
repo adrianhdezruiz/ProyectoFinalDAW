@@ -119,7 +119,7 @@ if (isset($_SESSION['userId'])) {
                         <label class="mb-3"><b>CONTRASEÑA</b></label>
                         <input type="password" class="form-control p-2" name="contrasenyaRegistro" id="contrasenyaRegistro" placeholder="Introduce tu contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
                         <div class="valid-feedback">Campo correcto</div>
-                        <div class="invalid-feedback">Mínimo seis caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>
+                        <div class="invalid-feedback">Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>
                     </div>
                 </div>
                 <!--Derecha-->
@@ -145,7 +145,7 @@ if (isset($_SESSION['userId'])) {
                         <label class="mb-3"><b>REPETIR CONTRASEÑA</b></label>
                         <input type="password" class="form-control p-2 mb-1" id="rcontrasenyaRegistro" placeholder="Repite tu contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
                         <div class="valid-feedback">Campo correcto</div>
-                        <div class="invalid-feedback">Mínimo seis caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>
+                        <div class="invalid-feedback">Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>
                     </div>
 
                 </div>

@@ -7,9 +7,15 @@ $success :#C3D9C6;
 $dark:#000000;
 $secondary:#edf0ee;
 
+
+@font-face {
+  font-family: "SegoeUI";
+  src: url(../../Fuentes/Segoe\ UI.ttf);
+}
+
 *{
     box-sizing: border-box;
-    font-family: 'Segoe UI';
+    font-family: 'SegoeUI';
    
 }
 

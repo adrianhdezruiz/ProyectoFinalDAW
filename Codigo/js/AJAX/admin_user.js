@@ -179,7 +179,71 @@ $(document).ready(function(){
         
         //CREAR  1
 
-        $('#adminAddUser').submit(function(e){
+        $('#addUsersLink').click(function(e){ 
+
+
+            $('#addUsersPanel').empty();
+            e.preventDefault();
+
+
+            var html = `        <div class="row mt-5">
+            <div class="col-12 border text-success fs-4">
+                <div class="row">
+
+                    <div class="col-12 border bg-secondary" style="text-align:end; "><img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
+
+                </div>
+                <form method="POST" id="adminAddUser">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Nombre</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce nombre" id="adminNombre" maxlength="50" required pattern="[A-Za-zñÑÁÉÍÓÚáéíóú'-]*"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Apellidos</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce apellidos" id="adminApellidos" maxlength="200" required pattern="[ A-Za-zñÑÁÉÍÓÚáéíóú'-]*"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Telefono</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce telefono" id="adminTelefono" minlength="9" maxlength="9" required pattern="[0-9]*"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Email</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="email" style="width: 100%;height:100%; border:none " placeholder="Introduce email" id="adminEmail" maxlength="255" required></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Rol</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white">
+                            <select class="form-select fs-4" id="adminRol" style="border:none" aria-label="Default select example">
+                                <option value="1">Admin</option>
+                                <option value="2">Usuario</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Contraseña</div>
+                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="password" style="width: 100%;height:100%; border:none " placeholder="Introduce contraseña" id="adminContrasenya" minlength="8" maxlength="20" required  ></div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="adminAddUserSubmit" value="AÑADIR USUARIO"></div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>`
+
+        $('#addUsersPanel').append(html); 
+
+        $(document).on('click','#cerrarPanel',function(e){
+            $('#addUsersPanel').empty();
+        })
+
+        $(document).on('submit','#adminAddUser',function(e){
             e.preventDefault();
 
             const data = {
@@ -210,6 +274,9 @@ $(document).ready(function(){
                     }
                 })
         })
+
+        })
+
 
         //EDITAR 2, VER 3, ELIMINAR 4
 

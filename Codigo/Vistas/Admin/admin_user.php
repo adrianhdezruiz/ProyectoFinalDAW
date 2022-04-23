@@ -108,56 +108,8 @@ if (isset($_SESSION['userId'])) {
         </span>
         <!--Panel añadir usuario-->
 
-        <div class="row mt-5">
-            <div class="col-12 border text-success fs-4">
-                <div class="row">
-
-                    <div class="col-12 border bg-secondary" style="text-align:end; ">.</div>
-
-                </div>
-                <form method="POST" id="adminAddUser">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Nombre</div>
-                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce nombre" id="adminNombre" maxlength="50" required pattern="[A-Za-zñÑÁÉÍÓÚáéíóú'-]*"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Apellidos</div>
-                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce apellidos" id="adminApellidos" maxlength="200" required pattern="[ A-Za-zñÑÁÉÍÓÚáéíóú'-]*"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Telefono</div>
-                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " placeholder="Introduce telefono" id="adminTelefono" minlength="9" maxlength="9" required pattern="[0-9]*"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Email</div>
-                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="email" style="width: 100%;height:100%; border:none " placeholder="Introduce email" id="adminEmail" maxlength="255" required></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Rol</div>
-                        <div class="col-lg-9 col-sm-12 border" style="background-color:white">
-                            <select class="form-select fs-4" id="adminRol" style="border:none" aria-label="Default select example">
-                                <option value="1">Admin</option>
-                                <option value="2">Usuario</option>
-
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Contraseña</div>
-                        <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="password" style="width: 100%;height:100%; border:none " placeholder="Introduce contraseña" id="adminContrasenya" minlength="6" maxlength="20" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"></div>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="adminAddUserSubmit" value="AÑADIR USUARIO"></div>
-                    </div>
-                </form>
-
-            </div>
-
-        </div>
+        <h2><a href="#" id="addUsersLink">+Añadir usuarios</a></h2>
+        <div id="addUsersPanel"></div>
 
         <!--Tabla usuarios-->
 

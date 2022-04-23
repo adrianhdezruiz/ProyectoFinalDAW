@@ -104,11 +104,10 @@ if (isset($_SESSION['userId'])) {
         <h1 class="text-success fw-bold text-center m-3">MARCAS</h1>
         <div id="result"></div>
 
-        <div class="row bg-dark ">
-            <div class="col-10">
-                <input type="text" class="form-control mt-2" id="addMarca" placeholder="Crea una nueva marca" style="height: 3rem;" maxlength="100" required>
-            </div>
-            <div class="col-2"><input type="button" id="addMarcaBtn" class="btn btn-success form-control mt-2" value="Añadir" style="height: 3rem;"></div>
+        <h2><a href="#" id="addMarcaLink">+Añadir marca</a></h2>
+        <div class="row bg-dark mt-3 " id="addMarcaPanel">
+
+
         </div>
 
         <div class="row" id="marcas">
