@@ -182,7 +182,7 @@ $(document).ready(function(){
         $('#addUsersLink').click(function(e){ 
 
 
-            $('#addUsersPanel').empty();
+            $('#display').empty();
             e.preventDefault();
 
 
@@ -237,10 +237,10 @@ $(document).ready(function(){
 
         </div>`
 
-        $('#addUsersPanel').append(html); 
+        $('#display').append(html); 
 
         $(document).on('click','#cerrarPanel',function(e){
-            $('#addUsersPanel').empty();
+            $('#display').empty();
         })
 
         $(document).on('submit','#adminAddUser',function(e){

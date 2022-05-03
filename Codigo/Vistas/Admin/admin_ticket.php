@@ -123,82 +123,37 @@ if (isset($_SESSION['userId'])) {
 
                     <li class="list-group-item p-3 border border-0 bg-secondary">
                         <div class="row ">
-                            <div class="col-9"><input type="text" class="form-control" placeholder="Introduce la ID del ticket ..."></div>
+                            <div class="col-9"><input type="text" id="valueTicket" class="form-control" placeholder="Introduce la ID del ticket ..." maxlength="14"></div>
 
-                            <div class="col-3"><input type="button" class="form-control" value="Buscar "></div>
-                            <span></span>
+                            <div class="col-3"><input type="button" class="form-control" value="Buscar " id="buscarTicket"></div>
+                            <span id="error" class="text-danger"></span>
                         </div>
                     </li>
-                    <li class="list-group-item   p-3 border border-0">USUARIO:</li>
-                    <li class="list-group-item bg-secondary  p-3 border border-0">FECHA:</li>
-                    <li class="list-group-item  p-3 border border-0">HORA INICIO:</li>
-                    <li class="list-group-item bg-secondary  p-3 border border-0">HORA FIN:</li>
-                    <li class="list-group-item  p-3 border border-0">MARCA: </li>
-                    <li class="list-group-item p-3 border bg-secondary  border-0">MODELO: </li>
-                    <li class="list-group-item p-3 border border-0">PRECIO FINAL: </li>
+                    <li class="list-group-item   p-3 border border-0"><b>USUARIO:</b> <span id="usuarioTicket"></span></li>
+                    <li class="list-group-item bg-secondary  p-3 border border-0"><b>FECHA:</b> <span id="fechaTicket"></li>
+                    <li class="list-group-item  p-3 border border-0"><b>HORA INICIO:</b> <span id="horaInicioTicket"></li>
+                    <li class="list-group-item bg-secondary  p-3 border border-0"><b>HORA FIN:</b> <span id="horaFinalTicket"></li>
+                    <li class="list-group-item  p-3 border border-0"><b>PATIN:</b> <span id="patinTicket"> </li>
+                    <li class="list-group-item p-3 border border-0 bg-secondary"><b>PRECIO FINAL:</b> <span id="precioTicket"></li>
                 </ul>
             </div>
-            <div class="col-8 bg-dark">
+            <div class="col-8 bg-dark" id="ticketsActivos">
                 <div class="row ">
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">ID</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Usuario</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Fecha</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Hora inicio - Hora fin</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Precio </div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Patin <span class="me-2" style="float:right">🟢</span></div>
+                    <div class="col-2 bg-light p-3 text-center mb-1"><b>ID</b></div>
+                    <div class="col-2 bg-light p-3 text-center mb-1"><b>Usuario</b></div>
+                    <div class="col-2 bg-light p-3 text-center mb-1"><b>Fecha</b></div>
+                    <div class="col-2 bg-light p-3 text-center mb-1"><b>Hora inicio - Hora fin</b></div>
+                    <div class="col-2 bg-light p-3 text-center  mb-1"><b>Precio</b> </div>
+                    <div class="col-2 bg-light p-3 text-center  mb-1"><b>Patin</b> <span class="me-2" style="float:right">🟢</span></div>
                 </div>
-                <div class="row ">
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">ID</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Usuario</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Fecha</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Hora inicio - Hora fin</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Precio </div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Patin <span class="me-2" style="float:right">🟢</span></div>
-                </div>
-
-                <div class="row ">
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">ID</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Usuario</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Fecha</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Hora inicio - Hora fin</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Precio </div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Patin <span class="me-2" style="float:right">🟢</span></div>
-                </div>
-
-                <div class="row ">
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">ID</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Usuario</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Fecha</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Hora inicio - Hora fin</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Precio </div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Patin <span class="me-2" style="float:right">🟢</span></div>
-                </div>
-
-                <div class="row ">
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">ID</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Usuario</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Fecha</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Hora inicio - Hora fin</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Precio </div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Patin <span class="me-2" style="float:right">🟢</span></div>
-                </div>
-
-                <div class="row ">
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">ID</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Usuario</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Fecha</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Hora inicio - Hora fin</div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Precio </div>
-                    <div class="col-2 bg-light p-3 text-center mt-1 mb-1">Patin <span class="me-2" style="float:right">🟢</span></div>
-                </div>
-
-
 
             </div>
 
         </div>
 
     </main>
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/AJAX/admin_ticket.js"></script>
 </body>
 
 </html>

@@ -106,280 +106,67 @@ if (isset($_SESSION['userId'])) {
         </nav>
     </header>
     <main class="w-75" style="margin:auto">
+
+        <input type="hidden" id="idMarca" value="<?php echo $marcaActual["idMarca"] ?>" />
+
         <h1 class="text-success fw-bold text-center m-4">
             <?php echo $marcaActual["nombre"] ?>
         </h1>
 
-
-        <!--Panel que se mostrara cuando el administrador pulse en añadir modelo-->
-
-        <div class="row mt-5">
-            <div class="col-12 border text-success fs-4">
-                <div class="row">
-                    <!--Icono cerrar-->
-                    <div class="col-12 border bg-secondary" style="text-align:end; color:red">.</div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Modelo</div>
-                    <div class="col-lg-9 border col-sm-12" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el nombre del modelo"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Descripcion</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10">Introduce una descripción</textarea></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Precio / hora</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Introduce el precio por hora"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12border bg-success text-dark p-2">Imagen</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="file" class="form-control p-3" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce apellido"></div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="exampleInputEmail1" value="AÑADIR MODELO"></div>
-                </div>
-
-
-            </div>
-
-        </div>
-        <!--Panel que se mostrara cuando el administrador pulse en añadir patin-->
-
-        <div class="row mt-5">
-            <div class="col-12 border text-success fs-4">
-                <div class="row">
-                    <!--Icono cerrar-->
-                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> .</div>
-
-                </div>
-
-
-                <div class="row">
-                    <div class="col-lg-3 border bg-success text-dark p-2">Modelo</div>
-                    <div class="col-lg-9 border" style="background-color:white">
-                        <select class="form-select fs-4" style="border:none" aria-label="Default select example">
-                            <option value="1">Modelo1</option>
-                            <option value="2">Modelo2</option>
-
-                        </select>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="exampleInputEmail1" value="AÑADIR PATIN"></div>
-                </div>
-
-
-            </div>
-
-        </div>
-
         <!--MODELOS-->
 
-        <div class="row d-flex text-center p-2 mt-5  bg-success" style="border-bottom: 3px outset grey; " id="modelos">
-            <div class="col-4 p-1"><a href="">+Añadir modelo</a></div>
-            <div class="col-4 fs-4 ">MODELOS</div>
+        <div id="result"></div>
+
+
+        <div class="row d-flex text-center p-2 mt-5  bg-success">
+            <div class="col-4 p-1 fs-5"><a href="#" id="anadirModeloEnlace">+Añadir modelo</a></div>
+            <div class="col-4 fs-3 ">MODELOS</div>
             <div class="col-4"></div>
         </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">1</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4">
-                <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
+        <div id="display"></div>
+        <div id="modelos">
+            <div class="row d-flex text-center p-2 bg-secondary fs-5" style="border-bottom: 5px double black; ">
+                <div class="col-4 p-1"><b>ID MODELO</b></div>
+                <div class="col-4"><b>MODELO</b></div>
+                <div class="col-4"></div>
             </div>
         </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">2</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4">
-                <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-            </div>
-        </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">3</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4">
-                <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-            </div>
-        </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">4</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4">
-                <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-            </div>
-        </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">5</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4">
-                <a href="" id="ver" style="text-decoration: none;">Ver |</a>
-                <a href="" id="editar" style="text-decoration: none;">Editar |</a>
-                <a href="" id="eliminar" style="text-decoration: none;">Eliminar</a>
-            </div>
-        </div>
-
-
 
 
         <!--Panel que se mostrara cuando el administrador pulse en editar modelo-->
 
-        <div class="row mt-5">
-            <div class="col-12 border text-success fs-4">
-                <div class="row">
-                    <!--Icono cerrar-->
-                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
 
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Modelo</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" placeholder="Introduce el nuevo nombre del modelo"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Descripcion</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10">Introduce una nueva descripción</textarea></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Precio / hora</div>
-                    <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Introduce el nuevo precio por hora"></div>
-                </div>
-
-
-                <div class="row">
-
-                    <div class="col-12 border bg-secondary"> <input type="submit" style="width: 100%;height:100%; border:none" id="exampleInputEmail1" value="CONFIRMAR EDICION"></div>
-                </div>
-
-
-            </div>
-
-        </div>
 
         <!--Panel que se mostrara cuando el administrador pulse en ver modelo-->
-
-        <div class="row mt-5">
-            <div class="col-12 border text-success fs-4">
-                <div class="row">
-                    <!--Icono cerrar-->
-                    <div class="col-12 border bg-secondary" style="text-align:end; color:red"> <img src="../../../Imagenes//cerrar-modified.png" id="cerrarPanel" width="2%" height="80%"></div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-9 col-sm-12">
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Id</div>
-                            <div class="col-lg-9  col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" readonly placeholder="Id"></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Modelo</div>
-                            <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" readonly placeholder="Modelo"></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-3-lg col-sm-12 border bg-success text-dark p-2">Descripcion</div>
-                            <div class="col-9-lg col-sm-12  border p-3" style="background-color:white"> <textarea class="form-control" name="" id="" cols="30" rows="10" readonly>Descripcion</textarea></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Precio / hora</div>
-                            <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="number" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" readonly value="5"></div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-3 col-sm-12 border bg-success text-dark p-2">Fecha registro</div>
-                            <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " id="exampleInputEmail1" step="0.1" min="0" placeholder="Fecha" readonly></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-12 bg-secondary">
-                        <img src="../../../Imagenes/567213_00_1.jpg" width="100%" height="100%">
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-12 border bg-secondary"> .</div>
-                </div>
-
-
-            </div>
-
-        </div>
 
 
 
         <!--PATINES-->
         <!--Order by Modelo-->
 
-        <div class="row d-flex text-center p-2  bg-success mt-5" style="border-bottom: 3px outset grey; " id="modelos">
-            <div class="col-4 p-1"><a href="">+Añadir patin</a></div>
+        <div class="row d-flex text-center p-2  bg-success mt-5" id="modelos">
+            <div class="col-4 p-1 fs-5"><a href="" id="addPatin">+Añadir patin</a></div>
             <div class="col-4 fs-4 ">PATINES</div>
+            <div class="col-4">
+                <select id="selectPatin" class="p-1 rounded rounded-3" style="width: 80%; position:relative;top:7%" id="searchInput">
+
+                </select>
+                <button class="btn btn-dark" id="search">Buscar</button>
+            </div>
+        </div>
+        <div id="displayPatin"></div>
+        <div class="row d-flex text-center p-2 bg-secondary fs-5" style="border-bottom: 5px double black; ">
+            <div class="col-4 p-1"><b>ID PATIN</b></div>
+            <div class="col-4"><b>MODELO</b></div>
             <div class="col-4"></div>
         </div>
+        <div id="patines">
 
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">1</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4"><a href="">Eliminar</a></div>
         </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">2</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4"><a href="">Eliminar</a></div>
-        </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">3</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4"><a href="">Eliminar</a></div>
-        </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">4</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4"><a href="">Eliminar</a></div>
-        </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">5</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4"><a href="">Eliminar</a></div>
-        </div>
-
-        <div class="row d-flex text-center p-2 bg-light" style="border-bottom: 2px outset grey; ">
-            <div class="col-4 p-1">6</div>
-            <div class="col-4">Modelo</div>
-            <div class="col-4"><a href="">Eliminar</a></div>
-        </div>
-
-
 
 
 
     </main>
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/AJAX/admin_modelo.js"></script>
 </body>
