@@ -15,7 +15,7 @@ $(document).ready(function(){
             <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].idUsuario}</div>
             <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].fechaRegistro}</div>
             <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].horaInicio} - ${ticketsActivos[i].horaFinal}</div>
-            <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].precio} </div>
+            <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].precio} €</div>
             <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].patin} </div>
         </div>`;
 
@@ -56,7 +56,7 @@ $('#actualizarTicketsActivos').click(function(){
             <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].idUsuario}</div>
             <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].fechaRegistro}</div>
             <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].horaInicio} - ${ticketsActivos[i].horaFinal}</div>
-            <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].precio} </div>
+            <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].precio} €</div>
             <div class="col-2 bg-light p-3 text-center mb-1">${ticketsActivos[i].patin} </div>
         </div>`;
 
@@ -93,7 +93,7 @@ $('#buscarTicket').click(function(){
             $('#horaInicioTicket').html(searchedTicket.horaInicio)
             $('#horaFinalTicket').html(searchedTicket.horaFinal)
             $('#patinTicket').html(searchedTicket.patin)
-            $('#precioTicket').html(searchedTicket.precio)
+            $('#precioTicket').html(searchedTicket.precio+" €")
            
         }else{
             $('#error').html('No se encontraron resultados');

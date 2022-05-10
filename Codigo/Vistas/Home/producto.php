@@ -2,8 +2,13 @@
 
 include '../../config/dbconnection.php';
 require_once '../../Modelos/usuario.php';
+require_once '../../Modelos/modelo.php';
 
 session_start();
+
+$idModelo = $_GET["id"];
+$modelo = new Modelo();
+$modeloActual = $modelo->obtenerModelo($idModelo, $conn);
 
 $user = new Usuario();
 
@@ -95,16 +100,18 @@ if (isset($_SESSION['userId'])) {
             <!--Main Izqda -->
             <div class="col-12 col-lg-5 col-md-12 col-sm-12 bg-dark text-success d-flex justify-content-center p-3 ">
                 <div class="card" style="width: 45em;">
-                    <img class="card-img-top" id="img" src="../../../Imagenes/567213_00_1.jpg" style="height: 100%;" data-zoom-image="../../Imagenes/567213_00_1.jpg">
+                    <img class="card-img-top" id="img" src="../../../Imagenes/Modelos/<?= $modeloActual[0]["imagen"] ?>" style="height: 100%;" data-zoom-image="../../Imagenes/567213_00_1.jpg">
 
                 </div>
             </div>
 
             <!--Main Derecha-->
             <div class="col-12 col-lg-7  col-md-12 col-sm-12 bg-ligth  bg-light text-center">
+
+
                 <!--Header-->
                 <div class="row bg-dark ">
-                    <h1 class="text-success">MODELO</h1>
+                    <h1 class="text-success"><?= strtoupper($modeloActual[0]["nombre"]); ?></h1>
                 </div>
 
                 <div class="row mt-3 fs-4">
@@ -113,22 +120,21 @@ if (isset($_SESSION['userId'])) {
 
                         <h2 class="fw-bolder ">Descripcion</h2>
                         <hr>
-                        <p class="blockquote fs-4 mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores vero culpa perferendis possimus obcaecati quasi ratione harum optio error, explicabo molestias dolor. Commodi nemo quibusdam ipsum voluptates consectetur pariatur temporibus.ç
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt earum soluta sit suscipit nulla vero maiores deleniti veniam sunt facere quos voluptatum aut reiciendis sapiente error, exercitationem harum odit. Fugit.
-                        </p>
+                        <p class="blockquote fs-4 mb-4"><?= $modeloActual[0]["descripcion"] ?></p>
                         <hr>
                         <h2 class="fw-bolder mb-4">Precio / hora: </h2>
-                        <input type="text" class="mb-4" name="" id="" readonly value="5.00€ " style="border:inset; text-align:center">
+                        <input type="text" class="mb-4" name="precioHora" id="" readonly value="<?= $modeloActual[0]["precioHora"] . "€" ?> " style="border:inset; text-align:center">
                     </div>
 
                     <div class="row bg-dark mb-4 ms-0">
                         <h1 class="text-success">DATOS ALQUILER</h1>
                     </div>
 
-                    <form action="ticket.php">
+                    <form action="ticket.php" method="POST" id="form">
+                        <input type="hidden" name="idModelo" value="<?= $modeloActual[0]["idModelo"] ?>">
                         <div>
                             <label for="exampleInputEmail1" class="form-label fw-bold">Fecha</label>
-                            <input type="date" class="form-control text-center w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input type="date" class="form-control text-center w-100" id="fecha" name="fecha" required>
                         </div>
                         <hr>
                         <div class="col-12 ">
@@ -136,26 +142,29 @@ if (isset($_SESSION['userId'])) {
                                 <div class="col-6 b">
                                     <div class="mb-3">
                                         <label for="exampleInputEmail1" class="form-label fw-bold">Hora inicio</label>
-                                        <input type="time" class="form-control text-center w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <input type="time" class="form-control text-center w-100" id="horaInicio" name="horaInicio" required>
                                     </div>
                                 </div>
 
                                 <div class="col-6">
 
                                     <label for=" exampleInputEmail1" class="form-label fw-bold">Hora fin</label>
-                                    <input type="time" class="form-control text-center w-100" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="time" class="form-control text-center w-100" id="horaFin" name="horaFin" required>
                                 </div>
                             </div>
                         </div>
 
-                        <input type="submit" value="Ir a pagar" class="btn btn-dark text-success m-3 fs-4">
+                        <input type="submit" id="submit" value="Ir a pagar" name="submit" class="btn btn-dark text-success m-3 fs-4">
+                        <br>
+                        <span class="text-danger mb-2" id="error"></span>
                     </form>
                 </div>
 
             </div>
         </main>
     </div>
-
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/AJAX/home_producto.js"></script>
 </body>
 
 </html>

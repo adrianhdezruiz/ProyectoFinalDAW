@@ -34,4 +34,36 @@ class PatinModelo
 
         return $result;
     }
+
+    public function obtenerNombreMarca($idMarca, $conn)
+    {
+        $sql = "SELECT nombre FROM Marca WHERE idMarca=$idMarca";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+
+
+        return $result[0];
+    }
+
+    public function obtenerNombreModelo($idModelo, $conn)
+    {
+        $sql = "SELECT nombre FROM Modelo WHERE idMarca=$idModelo";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetch();
+
+        return $result[0];
+    }
+
+    public function buscarModelo($search, $conn)
+    {
+
+        $sql = "SELECT * FROM Modelo WHERE nombre LIKE '$search%' ORDER BY idModelo";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+
+        return $result;
+    }
 }

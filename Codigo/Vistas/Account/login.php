@@ -96,7 +96,7 @@ if (isset($_SESSION['userId'])) {
       <!--Email-->
       <div class="form-group p-2">
         <label class="mb-3"><b>EMAIL</b></label>
-        <input type="email" class="form-control p-2" name="email" id="email" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚñ_-\.]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
+        <input type="email" class="form-control p-2" name="email" id="email" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚñ_\-.]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
         <div class="valid-feedback">Campo correcto</div>
         <div class="invalid-feedback">Introduce un email valido</div>
 

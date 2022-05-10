@@ -75,6 +75,29 @@ class Modelo
         }
     }
 
+    public function obtenerModelo($idModelo, $conn)
+    {
+
+        $sql = "SELECT * FROM Modelo WHERE idModelo=$idModelo";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+
+    public function obtenerModelosCompleto($conn)
+    {
+
+
+        $sql = "SELECT * FROM Modelo";
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+
     public function editarModelo($id, $campo, $valor, $conn)
     {
         $sql = "UPDATE Modelo SET $campo = :valor WHERE idModelo = :id";

@@ -91,19 +91,12 @@ if (isset($_SESSION['userId'])) {
     </header>
 
 
-    <main class="row w-75 fs-4 " style="margin: auto;position:absolute; top:25%; left:12.5%">
+    <main class="row w-75 fs-4  bg-light text-center p-3" style="margin: auto;position:absolute; top:25%; left:12.5%">
 
-        <input type="hidden" id="idUsuario" value="<?= $currentUser['idUsuario'] ?>" />
-        <input type="hidden" id="emailUsuario" value="<?= $currentUser['email'] ?>" />
-
-
-        <div id="ticketsUsuario">
-
-        </div>
+        <p>Su pago ha sido realizado con éxito. <br>Puede ver los datos acerca del ticket creado en el apartado de <a href="../Home/tickets_usuario.php">mis tickets.</a></p>
 
     </main>
-    <script src="../../js/jquery-3.6.0.js"></script>
-    <script src="../../js/AJAX/home_ticket.js"></script>
+
 </body>
 
 </html>

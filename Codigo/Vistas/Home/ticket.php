@@ -2,6 +2,9 @@
 
 include '../../config/dbconnection.php';
 require_once '../../Modelos/usuario.php';
+require_once '../../Modelos/modelo.php';
+require_once '../../ViewModels/patinModelo.php';
+require_once '../../ViewModels/procesarTicket.php';
 
 session_start();
 
@@ -13,7 +16,27 @@ if (isset($_SESSION['userId'])) {
 
     if ($currentUser['confirmado'] == 0) {
         header("Location: ../Account/confirmar_registro.php");
+    } else {
+        $idModelo = $_POST['idModelo'];
+        $horaInicio = $_POST['horaInicio'];
+        $horaFin = $_POST['horaFin'];
+
+        $modelo = new Modelo();
+        $modeloActual = $modelo->obtenerModelo($idModelo, $conn);
+
+        $vm = new PatinModelo();
+        $nombreMarca = $vm->obtenerNombreMarca($modeloActual[0]["idMarca"], $conn);
+
+        $vmProcesarTicket = new ProcesarTicket();
+        $id = $vmProcesarTicket->generarIdTicket();
+
+        $precioTotal = $vmProcesarTicket->calcularPrecioTicket($horaInicio, $horaFin, $modeloActual[0]["precioHora"]);
+        $precioTotalFormato = round($precioTotal, 2);
+
+        $idPatin = $vmProcesarTicket->asignarIdPatin($modeloActual[0]["idModelo"], $conn);
     }
+} else {
+    header("Location: ../Account/login.php");
 }
 ?>
 
@@ -26,6 +49,8 @@ if (isset($_SESSION['userId'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../sass/custom.css">
+    <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AQq1AuTfG0-A_Jfqv7oQW54GyqCb4v42M2pbo9u7Ssm-cPTfJ1DzSK7dCxqUd6y9hVNmReiMq5NoLEcF&currency=EUR"></script>
 </head>
 
 <body class="container-fluid bg-success">
@@ -95,15 +120,63 @@ if (isset($_SESSION['userId'])) {
         <div class="col-12 bg-dark text-success p-1 text-center">TICKET</div>
         <a href="#" class="list-group-item list-group-item-action  " aria-current="true">
             <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1 fw-bolder">1234567890ABCDE</h5>
-                <small><i>04/04/2022 | 12:00 - 13:00</i></small>
+
+                <h5 class="mb-1 fw-bolder" id="idTicket"><?= $id ?></h5>
+                <small><i><span id="fechaRegistro"><?= $_POST['fecha'] ?></span> |<span id="horaInicio"><?= $_POST['horaInicio'] ?></span> - <span id="horaFin"><?= $_POST['horaFin'] ?></span> </i></small>
             </div>
-            <p class="mb-1">user@gmail.com</p>
-            <small>Marca1 Modelo1</small>
+            <p class="mb-1"><?= $currentUser["email"] ?></p>
+            <small><?= $nombreMarca ?> <?= $modeloActual[0]["nombre"] ?></small>
             <hr>
-            <small class="blockquote-footer">TOTAL: X.XX €</small>
+            <small class="blockquote-footer">TOTAL: <?= $precioTotalFormato ?> €</small>
+            <input type="hidden" id="idServicio" value="<?= $id ?>" />
+            <input type="hidden" id="precioPaypal" value="<?= $precioTotalFormato ?>" />
+            <input type="hidden" id="idUsuario" value="<?= $currentUser["idUsuario"] ?>" />
+            <input type="hidden" id="idUsuario" value="<?= $currentUser["email"] ?>" />
+            <input type="hidden" id="idPatin" value="<?= $idPatin ?>" />
+
             <hr>
-            <small class="d-flex justify-content-center"><input type="button" class="btn btn-primary rounded rounded-pill fs-4" value="Pagar con PayPal"></small>
+            <div id="botonPaypalContainer" class="d-flex justify-content-center ">
+                <script>
+                    paypal.Buttons({
+                        style: {
+                            color: 'gold',
+                            shape: 'pill',
+                        },
+                        createOrder: function(data, actions) {
+                            return actions.order.create({
+                                purchase_units: [{
+                                    amount: {
+                                        value: $('#precioPaypal').val(),
+                                    }
+                                }]
+                            })
+                        },
+                        onApprove: function(data, actions) {
+                            const ticketData = {
+                                idAccion: 3,
+                                idServicio: $('#idServicio').val(),
+                                totalPrecio: $('#precioPaypal').val(),
+                                horaInicio: $('#horaInicio').text(),
+                                horaFin: $('#horaFin').text(),
+                                idUsuario: $('#idUsuario').val(),
+                                idPatin: $('#idPatin').val(),
+                                fechaRegistro: $('#fechaRegistro').text(),
+                                email: $('#email').val(),
+                            }
+
+                            console.log(ticketData);
+
+                            $.post('http://localhost/Codigo/Controladores/HomeController.php', ticketData, function(response) {
+                                if (response == 0) {
+                                    alert("Se ha producido un error durante el pago.")
+                                } else {
+                                    window.location.href = '../Home/pago_confirmado.php';
+                                }
+                            })
+                        }
+                    }).render('#botonPaypalContainer');
+                </script>
+            </div>
         </a>
 
     </main>

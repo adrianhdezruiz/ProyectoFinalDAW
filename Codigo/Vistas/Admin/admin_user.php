@@ -108,8 +108,8 @@ if (isset($_SESSION['userId'])) {
         </span>
         <!--Panel añadir usuario-->
 
-        <h2><a href="#" id="addUsersLink">+Añadir usuarios</a></h2>
-        <h2><a href="../../librerias/FPDF/index.php" id="addUsersLink">- Imprimir listado usuarios</a></h2>
+        <h2><a href="#" id="addUsersLink" style="text-decoration: none">+Añadir usuario </a><a href="../../librerias/FPDF/index.php" style="text-decoration: none">| Imprimir </a>
+        </h2>
         <div id="addUsersPanel"></div>
 
         <!--Tabla usuarios-->
