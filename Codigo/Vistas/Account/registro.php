@@ -29,7 +29,7 @@ if (isset($_SESSION['userId'])) {
 
     <!--Cabecera-->
     <header class="row bg-dark d-flex justify-content-center">
-        <img src="../../../Imagenes/logo1.png" id="logo_header">
+        <img src="../../../Imagenes/logo1.png" id="logo_header" alt="logo">
 
         <!-- Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
@@ -102,21 +102,21 @@ if (isset($_SESSION['userId'])) {
                 <div class="col-6 ">
                     <!--Nombre-->
                     <div class="form-group p-2 ms-3">
-                        <label class="mb-3"><b>NOMBRE</b></label>
+                        <label class="mb-3" for="nombreRegistro"><b>NOMBRE</b></label>
                         <input type="text" class="form-control p-2" name="nombreRegistro" id="nombreRegistro" placeholder="Introduce tu nombre" required maxlength="50" pattern="[A-Za-ñÑzÁÉÍÓÚáéíóú'-]*">
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Solo se permiten letras. No introduzcas espacios</div>
                     </div>
                     <!--Telefono-->
                     <div class="form-group p-2 ms-3">
-                        <label class="mb-3"><b>TELEFONO</b></label>
+                        <label class="mb-3" for="telefonoRegistro"><b>TELEFONO</b></label>
                         <input type="text" class="form-control p-2" name="telefonoRegistro" id="telefonoRegistro" placeholder="Introduce tu telefono" pattern="[0-9]*" minlength="9" maxlength="9" required>
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Introduzca un numero telefónico válido</div>
                     </div>
                     <!--Contraseña-->
                     <div class="form-group p-2 ms-3 mb-1">
-                        <label class="mb-3"><b>CONTRASEÑA</b></label>
+                        <label class="mb-3" for="contrasenyaRegistro"><b>CONTRASEÑA</b></label>
                         <input type="password" class="form-control p-2" name="contrasenyaRegistro" id="contrasenyaRegistro" placeholder="Introduce tu contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>
@@ -126,14 +126,14 @@ if (isset($_SESSION['userId'])) {
                 <div class="col-6 ">
                     <!--Apellidos-->
                     <div class="form-group p-2 me-3">
-                        <label class="mb-3"><b>APELLIDOS</b></label>
+                        <label class="mb-3" for="apellidosRegistro"><b>APELLIDOS</b></label>
                         <input type="text" class="form-control p-2" name="apellidosRegistro" id="apellidosRegistro" placeholder="Introduce tus apellidos" maxlength="200" pattern="[ A-Za-zñÑÁÉÍÓÚáéíóú'-]*" required>
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Solo se permiten letras</div>
                     </div>
                     <!--Correo electrónico-->
                     <div class="form-group p-2 me-3">
-                        <label class="mb-3"><b>EMAIL</b></label>
+                        <label class="mb-3" for="emailRegistro"><b>EMAIL</b></label>
 
                         <input type="email" class="form-control p-2" id="emailRegistro" name="emailRegistro" placeholder="Introduce tu email" maxlength="255" pattern="^[A-Za-z0-9ñÑáéíóúÁÉÍÓÚ_-.]*@(gmail|outlook|yahoo)\.[a-z]{2,3}" required>
 
@@ -142,7 +142,7 @@ if (isset($_SESSION['userId'])) {
                     </div>
                     <!--Repetir contraseña-->
                     <div class="form-group p-2 me-3">
-                        <label class="mb-3"><b>REPETIR CONTRASEÑA</b></label>
+                        <label class="mb-3" for="rcontrasenyaRegistro"><b>REPETIR CONTRASEÑA</b></label>
                         <input type="password" class="form-control p-2 mb-1" id="rcontrasenyaRegistro" placeholder="Repite tu contraseña" minlength="6" maxlength="20" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$" required>
                         <div class="valid-feedback">Campo correcto</div>
                         <div class="invalid-feedback">Mínimo ocho caracteres, al menos una letra mayúscula, una letra minúscula y un número</div>

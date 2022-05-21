@@ -34,7 +34,7 @@ if (isset($_SESSION['userId'])) {
 
         <!--Cabecera-->
         <header class="row bg-dark d-flex justify-content-center">
-            <img src="../../../Imagenes/logo1.png" id="logo_header">
+            <img src="../../../Imagenes/logo1.png" id="logo_header" alt="logo">
 
             <!-- Nav -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
@@ -104,6 +104,7 @@ if (isset($_SESSION['userId'])) {
             </div>
 
             <div class="col-12 col-lg-3 col-md-12 col-sm-12 p-3 mb-1  d-flex justify-content-center">
+                <label for="buscarModelo">.</label>
                 <input type="text" id="buscarModelo" class="form-control me-5" style="width:25rem" placeholder="Busca un modelo...">
 
             </div>

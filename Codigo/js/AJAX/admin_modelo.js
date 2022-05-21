@@ -67,8 +67,8 @@ $(document).ready(function(){
                                 <div class="col-lg-9 col-sm-12 border" style="background-color:white"> <input type="text" style="width: 100%;height:100%; border:none " value="${selectedModel.fechaRegistro}" step="0.1" min="0" placeholder="Fecha" readonly></div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-sm-12 bg-secondary">
-                            <img src="../../../Imagenes/Modelos/${selectedModel.imagen}" width="100%" height="100%">
+                        <div class="col-lg-3 col-sm-12 bg-secondary d-flex justify-content-center">
+                            <img src="../../../Imagenes/Modelos/${selectedModel.imagen}" style="width:21rem; heigth:12rem">
                         </div>
                     </div>
                     <div class="row">

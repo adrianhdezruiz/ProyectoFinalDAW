@@ -38,7 +38,7 @@ if (isset($_SESSION['userId'])) {
 
         <!--Cabecera-->
         <header class="row bg-dark d-flex justify-content-center">
-            <img src="../../../Imagenes/logo1.png" id="logo_header">
+            <img src="../../../Imagenes/logo1.png" id="logo_header" alt="logo">
 
             <!-- Nav -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
@@ -100,7 +100,7 @@ if (isset($_SESSION['userId'])) {
             <!--Main Izqda -->
             <div class="col-12 col-lg-5 col-md-12 col-sm-12 bg-dark text-success d-flex justify-content-center p-3 ">
                 <div class="card" style="width: 45em;">
-                    <img class="card-img-top" id="img" src="../../../Imagenes/Modelos/<?= $modeloActual[0]["imagen"] ?>" style="height: 100%;" data-zoom-image="../../Imagenes/567213_00_1.jpg">
+                    <img class="card-img-top" alt="patin" id="img" src="../../../Imagenes/Modelos/<?= $modeloActual[0]["imagen"] ?>" style="height: 100%;" data-zoom-image="../../Imagenes/567213_00_1.jpg">
 
                 </div>
             </div>
@@ -120,10 +120,10 @@ if (isset($_SESSION['userId'])) {
 
                         <h2 class="fw-bolder ">Descripcion</h2>
                         <hr>
-                        <p class="blockquote fs-4 mb-4"><?= $modeloActual[0]["descripcion"] ?></p>
+                        <p class="blockquote fs-5 mb-4"><?= $modeloActual[0]["descripcion"] ?></p>
                         <hr>
-                        <h2 class="fw-bolder mb-4">Precio / hora: </h2>
-                        <input type="text" class="mb-4" name="precioHora" id="" readonly value="<?= $modeloActual[0]["precioHora"] . "€" ?> " style="border:inset; text-align:center">
+                        <label class="fw-bolder mb-4" for="precioHora">Precio / hora: </label>
+                        <input type="text" class="mb-4" name="precioHora" id="precioHora" readonly value="<?= $modeloActual[0]["precioHora"] . "€" ?> " style="border:inset; text-align:center">
                     </div>
 
                     <div class="row bg-dark mb-4 ms-0">
@@ -133,7 +133,7 @@ if (isset($_SESSION['userId'])) {
                     <form action="ticket.php" method="POST" id="form">
                         <input type="hidden" name="idModelo" value="<?= $modeloActual[0]["idModelo"] ?>">
                         <div>
-                            <label for="exampleInputEmail1" class="form-label fw-bold">Fecha</label>
+                            <label for="fecha" class="form-label fw-bold">Fecha</label>
                             <input type="date" class="form-control text-center w-100" id="fecha" name="fecha" required>
                         </div>
                         <hr>
@@ -141,14 +141,14 @@ if (isset($_SESSION['userId'])) {
                             <div class="row ">
                                 <div class="col-6 b">
                                     <div class="mb-3">
-                                        <label for="exampleInputEmail1" class="form-label fw-bold">Hora inicio</label>
+                                        <label for="horaInicio" class="form-label fw-bold">Hora inicio</label>
                                         <input type="time" class="form-control text-center w-100" id="horaInicio" name="horaInicio" required>
                                     </div>
                                 </div>
 
                                 <div class="col-6">
 
-                                    <label for=" exampleInputEmail1" class="form-label fw-bold">Hora fin</label>
+                                    <label for="horaFin" class="form-label fw-bold">Hora fin</label>
                                     <input type="time" class="form-control text-center w-100" id="horaFin" name="horaFin" required>
                                 </div>
                             </div>

@@ -50,8 +50,8 @@ $(document).ready(function(){
        
             
             var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
-            <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" class="card-img-top" alt="...">
+            <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 25rem;">
+                <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" style="width:100%rem;height:25rem;" class="card-img-top" alt="...">
                 <div class="card-body">
 
                     <h5 class="card-title text-dark mb-3">${Marca["nombre"]}  ${result["modelos"][i].nombre}</h5>
@@ -108,7 +108,7 @@ $(document).ready(function(){
                 
                 var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
                 <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                    <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" class="card-img-top" alt="...">
+                    <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" style="width:100%rem;height:25rem;" class="card-img-top" alt="...">
                     <div class="card-body">
     
                         <h5 class="card-title text-dark mb-3">${Marca["nombre"]}  ${result["modelos"][i].nombre}</h5>
@@ -165,7 +165,7 @@ $(document).ready(function(){
             
             var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
             <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" class="card-img-top" alt="...">
+                <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" style="width:100%rem;height:25rem;" class="card-img-top" alt="...">
                 <div class="card-body">
 
                     <h5 class="card-title text-dark mb-3">${Marca["nombre"]}  ${result["modelos"][i].nombre}</h5>
@@ -198,7 +198,7 @@ $('#buscarMarca').click(function(){
                   
             var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
             <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                <img src="../../../Imagenes/Modelos/${selected["modelosMarca"][i].imagen}" class="card-img-top" alt="...">
+                <img src="../../../Imagenes/Modelos/${selected["modelosMarca"][i].imagen}" style="width:100%rem;height:25rem;" class="card-img-top" alt="...">
                 <div class="card-body">
 
                     <h5 class="card-title text-dark mb-3">${selected["nombreMarca"]} ${selected["modelosMarca"][i].nombre}</h5>
@@ -225,7 +225,7 @@ $('#buscarModelo').keyup(function(){
 
     $.post('http://localhost/Codigo/Controladores/HomeController.php',data,function(response){
 
-        console.log(response);
+        //console.log(response);
         var result = JSON.parse(response);
 
 
@@ -233,7 +233,7 @@ $('#buscarModelo').keyup(function(){
                   
             var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
             <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" class="card-img-top" alt="...">
+                <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" style="width:100%rem;height:25rem;"class="card-img-top" alt="...">
                 <div class="card-body">
 
                     <h5 class="card-title text-dark mb-3">${result["listaMarcas"][i]} ${result["modelos"][i].nombre}</h5>

@@ -122,7 +122,7 @@ if (isset($_SESSION['userId'])) {
             <div class="d-flex w-100 justify-content-between">
 
                 <h5 class="mb-1 fw-bolder" id="idTicket"><?= $id ?></h5>
-                <small><i><span id="fechaRegistro"><?= $_POST['fecha'] ?></span> |<span id="horaInicio"><?= $_POST['horaInicio'] ?></span> - <span id="horaFin"><?= $_POST['horaFin'] ?></span> </i></small>
+                <small><i><span id="fechaRegistro"><?= $_POST['fecha'] ?></span> | <span id="horaInicio"><?= $_POST['horaInicio'] ?></span> - <span id="horaFin"><?= $_POST['horaFin'] ?></span> </i></small>
             </div>
             <p class="mb-1"><?= $currentUser["email"] ?></p>
             <small><?= $nombreMarca ?> <?= $modeloActual[0]["nombre"] ?></small>
