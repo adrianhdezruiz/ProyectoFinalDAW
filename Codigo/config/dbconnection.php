@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "admin@localhost";
-$password = "admin";
+$username = "debianDB";
+$password = "debianDB";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=bdd", $username, $password);
