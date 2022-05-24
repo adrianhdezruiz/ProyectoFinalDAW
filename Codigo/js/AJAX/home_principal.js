@@ -1,6 +1,6 @@
 $(document).ready(function(){
     
-    $.get('http://'+window.location.hostname+'/Codigo/Controladores/HomeControllerGET.php',function(response){
+    $.get('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/HomeControllerGET.php',function(response){
 
 
     //--------------PAGINACION------------------//
@@ -189,7 +189,7 @@ $('#buscarMarca').click(function(){
         idMarca: $('#selectMarca').val(),
     }
 
-    $.post('http://'+window.location.hostname+'/Codigo/Controladores/HomeController.php',data,function(response){
+    $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/HomeController.php',data,function(response){
 
         var selected = JSON.parse(response);
         $('#modelos').empty();
@@ -223,7 +223,7 @@ $('#buscarModelo').keyup(function(){
         searchVal: $('#buscarModelo').val(),
     }
 
-    $.post('http://'+window.location.hostname+'/Codigo/Controladores/HomeController.php',data,function(response){
+    $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/HomeController.php',data,function(response){
 
         //console.log(response);
         var result = JSON.parse(response);

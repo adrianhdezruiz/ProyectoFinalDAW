@@ -5,7 +5,7 @@ $(document).ready(function(){
         emailUsuario:$('#emailUsuario').val(),
     }
 
-    $.get('http://'+window.location.hostname+'/Codigo/Controladores/ticketHomeControllerGET.php',data,function(response){
+    $.get('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/ticketHomeControllerGET.php',data,function(response){
 
         var ticketsUsuario = JSON.parse(response);
 

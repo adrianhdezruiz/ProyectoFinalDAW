@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
 
-    $.get('http://'+window.location.hostname+'/Codigo/Controladores/marcaAdminControllerGET.php',function(response){
+    $.get('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/marcaAdminControllerGET.php',function(response){
 
 
         var data = JSON.parse(response);
@@ -70,7 +70,7 @@ $(document).on('click','#addMarcaBtn',function(){
         nombre: $('#addMarca').val(),
     }
 
-    $.post('http://'+window.location.hostname+'/Codigo/Controladores/marcaAdminControllerPOST.php',data,function(response){
+    $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/marcaAdminControllerPOST.php',data,function(response){
 
         if (response == 0) {
            
@@ -130,7 +130,7 @@ $(document).on('click','.editar',function(e){
             nuevoNombre:$('#editarMarcaValue'+id).val(),
         }
 
-        $.post('http://'+window.location.hostname+'/Codigo/Controladores/marcaAdminControllerPOST.php',data,function(response){
+        $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/marcaAdminControllerPOST.php',data,function(response){
 
             if (response == 0) {
            
@@ -168,7 +168,7 @@ $(document).on('click','.eliminar',function(e){
 
    if(window.confirm("¿Estas seguro de que quieres eliminar esta marca?")){
 
-    $.post('http://'+window.location.hostname+'/Codigo/Controladores/marcaAdminControllerPOST.php',data,function(response){
+    $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/marcaAdminControllerPOST.php',data,function(response){
 
         if (response == 0) {
            
