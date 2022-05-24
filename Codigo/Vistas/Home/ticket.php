@@ -172,6 +172,8 @@ if (isset($_SESSION['userId'])) {
                                 } else {
                                     window.location.href = '../Home/pago_confirmado.php';
                                 }
+                            }, function(error) {
+                                console.log(error);
                             })
                         }
                     }).render('#botonPaypalContainer');
