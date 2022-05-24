@@ -166,7 +166,7 @@ if (isset($_SESSION['userId'])) {
 
                             console.log(ticketData);
 
-                            $.post('http://localhost/Codigo/Controladores/HomeController.php', ticketData, function(response) {
+                            $.post('http://' + window.location.hostname + '/Codigo/Controladores/HomeController.php', ticketData, function(response) {
                                 if (response == 0) {
                                     alert("Se ha producido un error durante el pago.")
                                 } else {

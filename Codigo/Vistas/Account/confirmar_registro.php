@@ -111,7 +111,7 @@ if (isset($_SESSION['userId'])) {
             var i = 1;
             $('#cod1').focus();
 
-            $('input').keypress(function() {
+            $('input').keyup(function() {
                 i++;
                 $('#cod' + i).focus();
                 //e.target.id

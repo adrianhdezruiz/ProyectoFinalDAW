@@ -2,7 +2,7 @@
 $(document).ready(function(){
 
 
-    $.get('http://localhost/Codigo/Controladores/ticketAdminControllerGET.php',function(response){
+    $.get('http://'+window.location.hostname+'/Codigo/Controladores/ticketAdminControllerGET.php',function(response){
 
         var ticketsActivos = JSON.parse(response);
 
@@ -34,7 +34,7 @@ $('#actualizarTicketsActivos').click(function(){
 
     $('#ticketsActivos').empty();
 
-    $.get('http://localhost/Codigo/Controladores/ticketAdminControllerGET.php',function(response){
+    $.get('http://'+window.location.hostname+'/Codigo/Controladores/ticketAdminControllerGET.php',function(response){
 
         var ticketsActivos = JSON.parse(response);
 
@@ -83,7 +83,7 @@ $('#buscarTicket').click(function(){
         idTicket :$('#valueTicket').val(),
     }
    
-    $.post('http://localhost/Codigo/Controladores/ticketAdminControllerPOST.php',data,function(response){
+    $.post('http://'+window.location.hostname+'/Codigo/Controladores/ticketAdminControllerPOST.php',data,function(response){
 
         var searchedTicket = JSON.parse(response);
 

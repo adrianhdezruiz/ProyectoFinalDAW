@@ -5,7 +5,7 @@ $(document).ready(function(){
         idMarca:$('#idMarca').val(),
     }
 
-    $.get('http://localhost/Codigo/Controladores/modeloAdminControllerGET.php',data,function(response){
+    $.get('http://'+window.location.hostname+'/Codigo/Controladores/modeloAdminControllerGET.php',data,function(response){
 
             var modelos = JSON.parse(response);
             
@@ -139,7 +139,7 @@ $(document).ready(function(){
                         precioHora:$('#precioModeloEditar').val(),
                     }
 
-                    $.post('http://localhost/Codigo/Controladores/modeloAdminControllerPOST.php',data,function(response){
+                    $.post('http://'+window.location.hostname+'/Codigo/Controladores/modeloAdminControllerPOST.php',data,function(response){
 
                     console.log(response);
                         if (response == 0) {
@@ -167,7 +167,7 @@ $(document).ready(function(){
                             idModelo:e.currentTarget.id,
                         }
 
-                        $.post('http://localhost/Codigo/Controladores/modeloAdminControllerPOST.php',data,function(response){
+                        $.post('http://'+window.location.hostname+'/Codigo/Controladores/modeloAdminControllerPOST.php',data,function(response){
 
                             if (response == 0) {
                               
@@ -191,7 +191,7 @@ $(document).ready(function(){
            })    
     })
 
-    $.get('http://localhost/Codigo/Controladores/patinAdminControllerGET.php',data,function(response){
+    $.get('http://'+window.location.hostname+'/Codigo/Controladores/patinAdminControllerGET.php',data,function(response){
 
             var patin = JSON.parse(response);
 
@@ -269,7 +269,7 @@ $(document).ready(function(){
                             idModelo: $('#selectPatinAdd').val(),
                         }
 
-                        $.post('http://localhost/Codigo/Controladores/patinAdminControllerPOST.php',data,function(response){
+                        $.post('http://'+window.location.hostname+'/Codigo/Controladores/patinAdminControllerPOST.php',data,function(response){
 
                             if (response == 0) {
            
@@ -302,7 +302,7 @@ $(document).ready(function(){
 
                     
     
-                    $.post('http://localhost/Codigo/Controladores/patinAdminControllerPOST.php',data,function(response){
+                    $.post('http://'+window.location.hostname+'/Codigo/Controladores/patinAdminControllerPOST.php',data,function(response){
     
                         if (response == 0) {
     
@@ -330,7 +330,7 @@ $(document).ready(function(){
                     idAccion:3,
                     idModelo:$('#selectPatin').val(),
                 }
-                    $.post('http://localhost/Codigo/Controladores/patinAdminControllerPOST.php',data,function(response){
+                    $.post('http://'+window.location.hostname+'/Codigo/Controladores/patinAdminControllerPOST.php',data,function(response){
                         var search = JSON.parse(response)
 
                         for (let i = 0; i < search.length; i++) {

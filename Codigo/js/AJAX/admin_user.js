@@ -3,7 +3,7 @@ $(document).ready(function(){
     
     /*------------GET----------*/
 
-    $.get('http://localhost/Codigo/Controladores/userAdminControllerGET.php',function(response){
+    $.get('http://'+window.location.hostname+'/Codigo/Controladores/userAdminControllerGET.php',function(response){
 
 
         //Obtener usuarios 
@@ -256,7 +256,7 @@ $(document).ready(function(){
                 contrasenya: $('#adminContrasenya').val(),
             }
             
-                $.post('http://localhost/Codigo/Controladores/userAdminControllerPOST.php',data,function (response){
+                $.post('http://'+window.location.hostname+'/Codigo/Controladores/userAdminControllerPOST.php',data,function (response){
 
                     if (response == 0) {
                         //console.log('Error al crear usuario');
@@ -359,7 +359,7 @@ $(document).ready(function(){
                             rol:$('#adminRolEdit').val(),
                         }
                         
-                        $.post('http://localhost/Codigo/Controladores/userAdminControllerPOST.php',data,function(response){
+                        $.post('http://'+window.location.hostname+'/Codigo/Controladores/userAdminControllerPOST.php',data,function(response){
 
                             if (response == 0) {
                                 //console.log('Error al crear usuario');
@@ -451,7 +451,7 @@ $(document).ready(function(){
                             id:e.currentTarget.id,
                         }
 
-                        $.post('http://localhost/Codigo/Controladores/userAdminControllerPOST.php',data,function(response){
+                        $.post('http://'+window.location.hostname+'/Codigo/Controladores/userAdminControllerPOST.php',data,function(response){
 
                             if (response == 0) {
                                 //console.log('Error al crear usuario');
