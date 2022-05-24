@@ -177,72 +177,73 @@ $(document).ready(function(){
             }
         })
 
+        $('#buscarMarca').click(function(){
+
+            const data = {
+                idAccion:1,
+                idMarca: $('#selectMarca').val(),
+            }
+        
+            $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/HomeController.php',data,function(response){
+        
+                var selected = JSON.parse(response);
+                $('#modelos').empty();
+        
+                for (let i = 0; i <= selected["modelosMarca"].length; i++) {
+                          
+                    var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
+                        <img src="../../../Imagenes/Modelos/${selected["modelosMarca"][i].imagen}" style="width:100%rem;height:25rem;" class="card-img-top" alt="...">
+                        <div class="card-body">
+        
+                            <h5 class="card-title text-dark mb-3">${selected["nombreMarca"]} ${selected["modelosMarca"][i].nombre}</h5>
+                            <a href="producto.php?id=${selected["modelosMarca"][i].idModelo}" class="btn btn-dark w-100">Alquilar</a>
+                        </div>
+                    </div>
+                </div>`;
+                    $('#modelos').append(html);
+                    }
+        
+        
+            })
+        })
+        
+        
+        $('#buscarModelo').keyup(function(){
+        
+            $('#modelos').empty();
+        
+            const data = {
+                idAccion:2,
+                searchVal: $('#buscarModelo').val(),
+            }
+        
+            $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/HomeController.php',data,function(response){
+        
+                //console.log(response);
+                var result = JSON.parse(response);
+        
+        
+                for (let i = 0; i <= result["modelos"].length; i++) {
+                          
+                    var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
+                    <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
+                        <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" style="width:100%rem;height:25rem;"class="card-img-top" alt="...">
+                        <div class="card-body">
+        
+                            <h5 class="card-title text-dark mb-3">${result["listaMarcas"][i]} ${result["modelos"][i].nombre}</h5>
+                            <a href="producto.php?id=${result["modelos"][i].idModelo}" class="btn btn-dark w-100">Alquilar</a>
+                        </div>
+                    </div>
+                </div>`;
+                    $('#modelos').append(html);
+                    }
+        
+            })
+        })
+
         
     })
 })
 
 
-$('#buscarMarca').click(function(){
-
-    const data = {
-        idAccion:1,
-        idMarca: $('#selectMarca').val(),
-    }
-
-    $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/HomeController.php',data,function(response){
-
-        var selected = JSON.parse(response);
-        $('#modelos').empty();
-
-        for (let i = 0; i <= selected["modelosMarca"].length; i++) {
-                  
-            var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
-            <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                <img src="../../../Imagenes/Modelos/${selected["modelosMarca"][i].imagen}" style="width:100%rem;height:25rem;" class="card-img-top" alt="...">
-                <div class="card-body">
-
-                    <h5 class="card-title text-dark mb-3">${selected["nombreMarca"]} ${selected["modelosMarca"][i].nombre}</h5>
-                    <a href="producto.php?id=${selected["modelosMarca"][i].idModelo}" class="btn btn-dark w-100">Alquilar</a>
-                </div>
-            </div>
-        </div>`;
-            $('#modelos').append(html);
-            }
-
-
-    })
-})
-
-
-$('#buscarModelo').keyup(function(){
-
-    $('#modelos').empty();
-
-    const data = {
-        idAccion:2,
-        searchVal: $('#buscarModelo').val(),
-    }
-
-    $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/HomeController.php',data,function(response){
-
-        //console.log(response);
-        var result = JSON.parse(response);
-
-
-        for (let i = 0; i <= result["modelos"].length; i++) {
-                  
-            var html = ` <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center">
-            <div class="card text-center shadow p-3 mb-5 bg-body rounded" style="width: 24rem;">
-                <img src="../../../Imagenes/Modelos/${result["modelos"][i].imagen}" style="width:100%rem;height:25rem;"class="card-img-top" alt="...">
-                <div class="card-body">
-
-                    <h5 class="card-title text-dark mb-3">${result["listaMarcas"][i]} ${result["modelos"][i].nombre}</h5>
-                    <a href="producto.php?id=${result["modelos"][i].idModelo}" class="btn btn-dark w-100">Alquilar</a>
-                </div>
-            </div>
-        </div>`;
-            $('#modelos').append(html);
-            }
-
-    })
-})
