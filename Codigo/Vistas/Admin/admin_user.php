@@ -131,7 +131,6 @@ if (isset($_SESSION['userId'])) {
                     </div>
                     <div class="col-lg-3  fs-5">
                         <input type="text" class="p-1 rounded rounded-3" style="width: 80%; position:relative;top:7%" placeholder="Buscar usuario por correo" id="searchInput">
-                        <button class="btn btn-success" id="search">Buscar</button>
                         <span class="text-danger me-5" id="searchError"></span>
 
                     </div>

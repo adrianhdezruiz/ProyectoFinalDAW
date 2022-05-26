@@ -477,7 +477,7 @@ $(document).ready(function(){
 
         //BUSCAR USUARIO 5
 
-        $('#search').click(function(){
+        $('#searchInput').keyup(function(){
             
 
             const data = {
