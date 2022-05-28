@@ -432,7 +432,7 @@ $('#anadirModeloEnlace').click(function(e){
 
 
         $.ajax({
-            url : 'http://localhost/Codigo/Controladores/modeloAdminControllerPOST.php',
+            url : 'http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/modeloAdminControllerPOST.php',
             type: "POST",
             data : fd,
             processData: false,
