@@ -2,8 +2,8 @@
 <?php
 
 try {
-    shell_exec("/var/www/html/ProyectoFinalDAW/Despliegue/Script/script.sh");
-    echo "SCRIPT EJECUTADO CON EXITO";
+    shell_exec("/var/www/html/ProyectoFinalDAW/Despliegue/Scripts/script.sh");
+    header("Location: ../Despliegue/aplicacion_instalada.php");
 } catch (\Throwable $th) {
     throw $th;
 }
