@@ -17,10 +17,7 @@
     <div style="margin:auto;border:1px solid black" class="w-50 p-3 mt-5">
         <h1>INSTALADOR</h1>
         <form method="POST" action="instalador.php">
-            <div class="mb-3">
-                <label for="ruta" style="font-weight:bold;" class="text-center">Ruta de instalación</label>
-                <input type="text" id="ruta" readonly value="/var/www/html/" class="form-control">
-            </div>
+
             <div class="mb-3">
                 <label for="bbdd" style="font-weight:bold;" class="text-center">Nombre base de datos</label>
                 <input type="text" id="bbdd" readonly value="bdd" class="form-control">
@@ -31,7 +28,7 @@
             </div>
             <div class="mb-3">
                 <label for="bbdd" style="font-weight:bold;" class="text-center">Contraseña BBDD</label>
-                <input type="password" id="bbdd" readonly value="debianDB" class="form-control">
+                <input type="text" id="bbdd" readonly value="debianDB" class="form-control">
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked readonly>
