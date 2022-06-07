@@ -332,16 +332,13 @@ $(document).ready(function(){
                 }
                     $.post('http://'+window.location.hostname+'/ProyectoFinalDAW/Codigo/Controladores/patinAdminControllerPOST.php',data,function(response){
                         var search = JSON.parse(response)
+                        var selectedModel = $('#selectPatin option:selected').text();
 
                         for (let i = 0; i < search.length; i++) {
-
-                            //OBTENER NOMBRES MODELOS
-                            var idModeloPatin =  `${search[i]["idModelo"]}`;
-                            var selectedModel = patin["patines"].find(i=>i.idModelo = idModeloPatin);
-                            
+       
                             var html = ` <div class="row d-flex text-center p-2 bg-light fs-5" style="border-bottom: 2px outset grey; ">
                             <div class="col-4 p-1">${search[i]["idPatin"]}</div>
-                            <div class="col-4">${selectedModel["nombreModelo"]}</div>
+                            <div class="col-4">${selectedModel}</div>
                             <div class="col-4" >
                                 <a href="" id="${search[i]["idPatin"]}" class="eliminar" style="text-decoration: none;">Eliminar</a>
                             </div>`;
