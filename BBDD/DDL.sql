@@ -2,7 +2,7 @@ CREATE TABLE `Rol` (
   `idRol` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
   PRIMARY KEY (`idRol`)
-);
+)DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 
 CREATE TABLE `Usuario` (
@@ -21,14 +21,14 @@ CREATE TABLE `Usuario` (
   UNIQUE KEY `codigoRegistro_UNIQUE` (`codigoRegistro`),
   KEY `fk_Usuario_Rol_idx` (`idRol`),
   CONSTRAINT `fk_Usuario_Rol` FOREIGN KEY (`idRol`) REFERENCES `Rol` (`idRol`) ON DELETE RESTRICT ON UPDATE CASCADE
-); 
+)DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci; 
 
 CREATE TABLE `Marca` (
   `idMarca` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   `fechaRegistro` datetime NOT NULL,
   PRIMARY KEY (`idMarca`)
-);
+)DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 CREATE TABLE `Modelo` (
   `idModelo` int NOT NULL AUTO_INCREMENT,
@@ -41,7 +41,7 @@ CREATE TABLE `Modelo` (
   PRIMARY KEY (`idModelo`),
   KEY `fk_Modelo_Marca_idx` (`idMarca`),
   CONSTRAINT `fk_Modelo_Marca` FOREIGN KEY (`idMarca`) REFERENCES `Marca` (`idMarca`) ON DELETE CASCADE ON UPDATE CASCADE
-); 
+)DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci; 
 
 CREATE TABLE `Patin` (
   `idPatin` int NOT NULL AUTO_INCREMENT,
@@ -52,7 +52,7 @@ CREATE TABLE `Patin` (
   KEY `fk_Patin_Modelo_idx` (`idModelo`),
   CONSTRAINT `fk_Patin_Marca` FOREIGN KEY (`idMarca`) REFERENCES `Marca` (`idMarca`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_Patin_Modelo` FOREIGN KEY (`idModelo`) REFERENCES `Modelo` (`idModelo`) ON DELETE CASCADE ON UPDATE CASCADE
-); 
+)DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci; 
 
 CREATE TABLE `Servicio` (
   `idServicio` varchar(20) NOT NULL,
@@ -68,7 +68,7 @@ CREATE TABLE `Servicio` (
   KEY `fk_Servicio_Patin_idx` (`idPatin`),
   CONSTRAINT `fk_Servicio_Patin` FOREIGN KEY (`idPatin`) REFERENCES `Patin` (`idPatin`) ON DELETE SET NULL ON UPDATE RESTRICT,
   CONSTRAINT `fk_Servicio_Usuario` FOREIGN KEY (`idUsuario`) REFERENCES `Usuario` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE
-); 
+)DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci; 
 
 INSERT INTO Rol (nombre) VALUES ("admin");
 INSERT INTO Rol (nombre) VALUES ("usuario");
