@@ -2,8 +2,8 @@
 
 export LANG=C.UTF-8
 
-USERDB="debianDB"
-PASSDB="debianDB"
+USERDB=$2
+PASSDB=$3
 BBDD=$1
 
 mysqladmin -u $USERDB -p$USERDB create $BBDD 

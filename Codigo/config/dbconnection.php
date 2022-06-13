@@ -1,8 +1,8 @@
 <?php
 session_start();
 $servername = "localhost";
-$username = "debianDB";
-$password = "debianDB";
+$username = $_SESSION['bbddusername'];
+$password = $_SESSION['bbddpassword'];
 $bbdd = $_SESSION['bbddname'];
 
 try {

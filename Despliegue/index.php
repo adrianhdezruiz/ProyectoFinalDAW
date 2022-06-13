@@ -24,15 +24,15 @@
 
             <div class="mb-3">
                 <label for="bbdd" style="font-weight:bold;" class="text-center">Nombre base de datos</label>
-                <input type="text" name="bbddname" placeholder="Introduce el nombre de la base de datos" class="form-control">
+                <input type="text" name="bbddname" placeholder="Introduce el nombre de la base de datos" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="bbdd" style="font-weight:bold;" class="text-center">Usuario BBDD</label>
-                <input type="text" id="bbdd" readonly value="debianDB" class="form-control">
+                <input type="text" name="bbddusername" placeholder="Introduce el usuario" class="form-control" required>
             </div>
             <div class="mb-3">
                 <label for="bbdd" style="font-weight:bold;" class="text-center">Contraseña BBDD</label>
-                <input type="text" id="bbdd" readonly value="debianDB" class="form-control">
+                <input type="password" name="bbddpassword" placeholder="Introduce la contraseña" class="form-control" required>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked readonly>
