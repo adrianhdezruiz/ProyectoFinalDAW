@@ -24,7 +24,7 @@
 
             <div class="mb-3">
                 <label for="bbdd" style="font-weight:bold;" class="text-center">Nombre base de datos</label>
-                <input type="text" id="bbdd" readonly value="bdd" class="form-control">
+                <input type="text" name="bbddname" placeholder="Introduce el nombre de la base de datos" class="form-control">
             </div>
             <div class="mb-3">
                 <label for="bbdd" style="font-weight:bold;" class="text-center">Usuario BBDD</label>
