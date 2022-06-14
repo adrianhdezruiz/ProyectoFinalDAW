@@ -1,5 +1,5 @@
 <?php
-session_start();
+/*session_start();
 $servername = "localhost";
 $username = $_SESSION['bbddusername'];
 $password = $_SESSION['bbddpassword'];
@@ -13,3 +13,4 @@ try {
 } catch (PDOException $e) {
     //echo "Connection failed: " . $e->getMessage();
 }
+*/
