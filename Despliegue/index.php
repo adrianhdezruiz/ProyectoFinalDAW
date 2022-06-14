@@ -15,12 +15,9 @@
         <img src="../Imagenes/logo1.png" id="logo_header" alt="logo">
     </header>
     <div style="margin:auto;border:1px solid black" class="w-50 p-3 mt-5">
-        <h1>INSTALADOR</h1>
+        <h1>INSTALADOR - Base de datos</h1>
+        <hr>
         <form method="POST" action="instalador.php">
-            <div class="mb-3">
-                <label for="bbdd" style="font-weight:bold;" class="text-center">Ruta instalacion</label>
-                <input type="text" id="bbdd" readonly value="/var/www/html/" class="form-control">
-            </div>
 
             <div class="mb-3">
                 <label for="bbdd" style="font-weight:bold;" class="text-center">Nombre base de datos</label>
@@ -40,7 +37,10 @@
                     Seed
                 </label>
             </div>
-            <input type="submit" value="Instalar" name="instalar" class="bg-dark text-light btn btn-dark mt-3">
+            <div>
+                <input type="submit" value="Instalar" name="instalar" class="bg-dark text-light btn btn-dark mt-3">
+                <p style="float:right;" class="mt-4">1</p>
+            </div>
         </form>
 
     </div>

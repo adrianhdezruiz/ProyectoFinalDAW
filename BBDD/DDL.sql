@@ -72,7 +72,7 @@ CREATE TABLE `Servicio` (
 
 INSERT INTO Rol (nombre) VALUES ("admin");
 INSERT INTO Rol (nombre) VALUES ("usuario");
-INSERT INTO Usuario (nombre,apellidos,telefono,email,fechaRegistro,contrasenya,codigoRegistro,confirmado,idRol) VALUES ("Admin","Account","685923614","admin@gmail.com","2022-05-11","$2y$10$2i.PfgGXm7uKJYErWlrkSuysGuiXzTKHBrjqwj61CGWuwaGMUC9HC","000000",1,1);
+
 INSERT INTO Usuario (nombre,apellidos,telefono,email,fechaRegistro,contrasenya,codigoRegistro,confirmado,idRol) VALUES ("User","Example","987654321","user1@gmail.com","2022-05-11","$2y$10$2i.PfgGXm7uKJYErWlrkSuysGuiXzTKHBrjqwj61CGWuwaGMUC9HC","abc001",0,2);
 INSERT INTO Usuario (nombre,apellidos,telefono,email,fechaRegistro,contrasenya,codigoRegistro,confirmado,idRol) VALUES ("User","Example","987654321","user2@gmail.com","2022-05-11","$2y$10$2i.PfgGXm7uKJYErWlrkSuysGuiXzTKHBrjqwj61CGWuwaGMUC9HC","f5fcag",0,2);
 INSERT INTO Usuario (nombre,apellidos,telefono,email,fechaRegistro,contrasenya,codigoRegistro,confirmado,idRol) VALUES ("User","Example","987654321","user3@gmail.com","2022-05-11","$2y$10$2i.PfgGXm7uKJYErWlrkSuysGuiXzTKHBrjqwj61CGWuwaGMUC9HC","dfc121",0,2);
