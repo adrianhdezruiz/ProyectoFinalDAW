@@ -15,7 +15,7 @@ $codigo = "
         \$servername = 'localhost';
         \$username = '$USERDB';
         \$password = '$PASSDB';
-        \$bbdd = $BBDD;
+        \$bbdd = '$BBDD';
         
         try {
             \$conn = new PDO('mysql:host=\$servername;dbname=' . \$bbdd, \$username, \$password);
