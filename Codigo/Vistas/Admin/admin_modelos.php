@@ -1,8 +1,12 @@
 <?php
 
 include '../../config/dbconnection.php';
+include '../../config/db.php';
 require_once '../../Modelos/usuario.php';
 require_once '../../Modelos/marca.php';
+
+$db = new DB();
+$db->checkIfDBExists();
 
 session_start();
 
