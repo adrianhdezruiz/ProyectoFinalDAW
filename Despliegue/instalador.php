@@ -5,25 +5,25 @@ $BBDD = $_POST['bbddname'];
 $USERDB = $_POST['bbddusername'];
 $PASSDB = $_POST['bbddpassword'];
 
-$nombreArchivo = "configBBDD.php";
+$nombreArchivo = "dbconnection.php";
 $nombreArchivo2 = $nombreArchivo;
 $nuevoArchivo = fopen("../Codigo/config/$nombreArchivo2", 'w');
 
 $codigo = "
         <?php
       
-        $servername = \'localhost\';
-        $username = $USERDB;
-        $password = $PASSDB;
-        $bbdd = $BBDD;
+        \$servername = 'localhost';
+        \$username = $USERDB;
+        \$password = $PASSDB;
+        \$bbdd = $BBDD;
         
         try {
-            $conn = new PDO('mysql:host=$servername;dbname=' . $bbdd, $username, $password);
+            \$conn = new PDO('mysql:host=$servername;dbname=' . \$bbdd, \$username, \$password);
             // set the PDO error mode to exception
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            \$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //echo 'Connected successfully';
-        } catch (PDOException $e) {
-            //echo 'Connection failed: ' . $e->getMessage();
+        } catch (PDOException \$e) {
+            //echo 'Connection failed: ' . \$e->getMessage();
         }
         ?>";
 
