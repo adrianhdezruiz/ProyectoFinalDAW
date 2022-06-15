@@ -66,30 +66,34 @@ if (isset($_SESSION['userId'])) {
         <!-- Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
 
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <?php if (!isset($_SESSION['userId'])) { ?>
                         <li class="nav-item active">
-                            <a class="nav-link" href="../Account/login.php">Login | </a>
+                            <a class="nav-link" href="../Account/login.php">Login </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="../Account/registro.php">Registro | </a>
+                            <a class="nav-link" href="../Account/registro.php">Registro </a>
                         </li>
                     <?php } ?>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="principal.php">Home |</a>
+                        <a class="nav-link" href="principal.php">Home </a>
                     </li>
 
                     <?php if (isset($_SESSION['userId'])) { ?>
                         <!--Solo usuarios registrados-->
                         <li class="nav-item">
-                            <a class="nav-link" href="perfil_usuario.php">Mi perfil |</a>
+                            <a class="nav-link" href="perfil_usuario.php">Mi perfil </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
+                            <a class="nav-link" href="tickets_usuario.php">Mis tickets </a>
                         </li>
                     <?php } ?>
 
@@ -106,7 +110,7 @@ if (isset($_SESSION['userId'])) {
                     <ul class="navbar-nav ms-auto ">
 
                         <li class="nav-item p-1">
-                            <a class="nav-link " href="#"><?= $currentUser['email'] ?> |</a>
+                            <a class="nav-link " href="perfil_usuario.php"><?= $currentUser['email'] ?> </a>
                         </li>
                         <li class="nav-item  d-flex align-items-center ">
                             <form action="../../Controladores/AccountController.php" method="POST">
@@ -184,7 +188,7 @@ if (isset($_SESSION['userId'])) {
         </a>
 
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -51,24 +51,24 @@ if (isset($_SESSION['userId'])) {
                     <ul class="navbar-nav">
                         <?php if (!isset($_SESSION['userId'])) { ?>
                             <li class="nav-item active">
-                                <a class="nav-link" href="../Account/login.php">Login | </a>
+                                <a class="nav-link" href="../Account/login.php">Login </a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="../Account/registro.php">Registro | </a>
+                                <a class="nav-link" href="../Account/registro.php">Registro </a>
                             </li>
                         <?php } ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="principal.php">Home |</a>
+                            <a class="nav-link" href="principal.php">Home </a>
                         </li>
 
                         <?php if (isset($_SESSION['userId'])) { ?>
                             <!--Solo usuarios registrados-->
                             <li class="nav-item">
-                                <a class="nav-link" href="perfil_usuario.php">Mi perfil |</a>
+                                <a class="nav-link" href="perfil_usuario.php">Mi perfil </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="tickets_usuario.php">Mis tickets |</a>
+                                <a class="nav-link" href="tickets_usuario.php">Mis tickets </a>
                             </li>
                         <?php } ?>
 
@@ -85,7 +85,7 @@ if (isset($_SESSION['userId'])) {
                         <ul class="navbar-nav ms-auto ">
 
                             <li class="nav-item p-1">
-                                <a class="nav-link " href="#"><?= $currentUser['email'] ?> |</a>
+                                <a class="nav-link " href="perfil_usuario.php"><?= $currentUser['email'] ?> </a>
                             </li>
                             <li class="nav-item  d-flex align-items-center ">
                                 <form action="../../Controladores/AccountController.php" method="POST">
