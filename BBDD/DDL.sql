@@ -140,7 +140,16 @@ INSERT INTO Patin (idMarca,idModelo) VALUES (6,6);
 INSERT INTO Patin (idMarca,idModelo) VALUES (7,7);
 INSERT INTO Patin (idMarca,idModelo) VALUES (7,9);
 INSERT INTO Patin (idMarca,idModelo) VALUES (8,10);
-
+INSERT INTO Patin (idMarca,idModelo) VALUES (1,1);
+INSERT INTO Patin (idMarca,idModelo) VALUES (2,2);
+INSERT INTO Patin (idMarca,idModelo) VALUES (3,3);
+INSERT INTO Patin (idMarca,idModelo) VALUES (3,8);
+INSERT INTO Patin (idMarca,idModelo) VALUES (4,4);
+INSERT INTO Patin (idMarca,idModelo) VALUES (5,5);
+INSERT INTO Patin (idMarca,idModelo) VALUES (6,6);
+INSERT INTO Patin (idMarca,idModelo) VALUES (7,7);
+INSERT INTO Patin (idMarca,idModelo) VALUES (7,9);
+INSERT INTO Patin (idMarca,idModelo) VALUES (8,10);
 INSERT INTO Patin (idMarca,idModelo) VALUES (1,1);
 INSERT INTO Patin (idMarca,idModelo) VALUES (2,2);
 INSERT INTO Patin (idMarca,idModelo) VALUES (3,3);
