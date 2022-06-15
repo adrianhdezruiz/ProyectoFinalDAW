@@ -25,12 +25,8 @@ class ProcesarTicket
         $stmt->execute();
         $result = $stmt->fetchAll();
 
-        $indiceAleatorio = rand(0, sizeof($result));
+        $indiceAleatorio = rand(0, sizeof($result) - 1);
         $idPatin = $result[$indiceAleatorio]["idPatin"];
-
-        if ($idPatin == sizeof($result)) {
-            $idPatin = $idPatin - 1;
-        }
 
         return $idPatin;
     }
