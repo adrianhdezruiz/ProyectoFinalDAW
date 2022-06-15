@@ -43,6 +43,10 @@ if (isset($_SESSION['userId'])) {
             <!-- Nav -->
             <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
 
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <?php if (!isset($_SESSION['userId'])) { ?>
@@ -131,6 +135,7 @@ if (isset($_SESSION['userId'])) {
         </footer>
     </div>
     <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="../../js/AJAX/home_principal.js"></script>
 </body>
 
