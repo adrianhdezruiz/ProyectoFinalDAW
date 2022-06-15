@@ -85,7 +85,7 @@ if (isset($_SESSION['userId'])) {
                     <ul class="navbar-nav ms-auto ">
 
                         <li class="nav-item p-1">
-                            <a class="nav-link " href="#"><?= $currentUser['email'] ?> |</a>
+                            <a class="nav-link " href="#"><?= $currentUser['email'] ?> </a>
                         </li>
                         <li class="nav-item  d-flex align-items-center ">
                             <form action="../../Controladores/AccountController.php" method="POST">
