@@ -23,19 +23,19 @@ $(document).ready(function(){
 
         /*----------------------------------------------------------------*/
 
-        var html = ` <li class="page-item  "><a class="page-link" id="prev"  tabindex="-1" aria-disabled="true">Anterior</a></li>`
+        var html = ` <li class="page-item  " style="list-style:none"><a class="page-link" id="prev"  tabindex="-1" aria-disabled="true">Anterior</a></li>`
         $('#pag').append(html);
 
         //Numeros indice paginacion
 
         var i = 1;
         while (i <= numPaginas && i<=numIndices) {
-            var html = `<li class="page-item" id="indice${i}li"><a class="page-link" id="indice${i}" >${i}</a></li>`;
+            var html = `<li class="page-item" id="indice${i}li" style="list-style:none"><a class="page-link" id="indice${i}" >${i}</a></li>`;
             $('#pag').append(html);
             i++;
         }
       
-        var html = ` <li class="page-item "><a class="page-link" id="next"  tabindex="-1" aria-disabled="true">Siguiente</a></li>`
+        var html = ` <li class="page-item " style="list-style:none"><a class="page-link" id="next"  tabindex="-1" aria-disabled="true">Siguiente</a></li>`
         $('#pag').append(html);
 
          /*----------------------------------------------------------------*/
