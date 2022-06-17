@@ -64,6 +64,9 @@ if (!empty($_POST['loginSubmit'])) {
 
     if (!$result == null) {
 
+
+        //Verificar contraseña
+
         if (password_verify($contrasenya, $result['contrasenya'])) {
             $_SESSION['userId'] = $result['idUsuario'];
             echo "<script>setTimeout(\"document.location.href = '../Vistas/Home/principal.php';\",0);</script>";
@@ -88,6 +91,8 @@ if (!empty($_POST['logoutSubmit'])) {
 //CONFIRMAR REGISTRO
 
 if (!empty($_POST['confirmSubmit'])) {
+
+    //Se comprueba si el codigo introducido por el usuario es igual que el que se encuentra en la base de datos
 
     if (isset($_SESSION['userId'])) {
 

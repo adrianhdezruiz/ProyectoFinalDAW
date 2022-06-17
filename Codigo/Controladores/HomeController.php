@@ -13,6 +13,9 @@ session_start();
 
 $idAccion = $_POST["idAccion"];
 
+
+//Eliminar usuario
+
 if (!empty($_POST['deleteAccount'])) {
 
     $id = $_SESSION['userId'];
@@ -29,8 +32,11 @@ if (!empty($_POST['deleteAccount'])) {
 }
 
 
+
 if ($idAccion != null) {
     switch ($idAccion) {
+
+            //Devuelve array que contiene el nombre de la marca y los modelos relacionados con esta 
         case 1:
             $idMarca = $_POST["idMarca"];
             $modelo = new Modelo();
@@ -48,6 +54,10 @@ if ($idAccion != null) {
             echo $json;
             break;
         case 2:
+
+            //Busqueda de modelo
+            //Devuelve array que contiene un array con el nombre de las marcas y otro array con el resultado de la busqueda para
+            //asignar el nombre de la marca
 
             $search = $_POST['searchVal'];
             $pm = new PatinModelo();
@@ -70,6 +80,8 @@ if ($idAccion != null) {
 
             break;
         case 3:
+
+            //Crear ticket
 
             $idServicio = $_POST['idServicio'];
             $totalPrecio = $_POST['totalPrecio'];
