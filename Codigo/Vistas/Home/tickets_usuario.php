@@ -37,13 +37,13 @@ if (isset($_SESSION['userId'])) {
 
     <!--Cabecera-->
     <header class="row bg-dark d-flex justify-content-center">
-        <img src="../../../Imagenes/logo1.png" id="logo_header">
+        <img src="../../../Imagenes/logo1.png" id="logo_header" alt="logo">
 
         <!-- Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
 
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">.</span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">

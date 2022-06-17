@@ -39,7 +39,7 @@ if (isset($_SESSION['userId'])) {
         <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
 
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">.</span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">

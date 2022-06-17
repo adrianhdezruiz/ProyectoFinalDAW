@@ -51,13 +51,13 @@ if (isset($_SESSION['userId'])) {
 <body class="bg-dark">
     <!--Cabecera-->
     <header class="row bg-success d-flex justify-content-center">
-        <img src="../../../Imagenes/logo2-modified.png" id="logo_header_admin" class="m-3" style="width: 13%;height:13%;">
+        <img src="../../../Imagenes/logo2-modified.png" id="logo_header_admin" class="m-3" style="width: 13%;height:13%;" alt="logo">
 
         <!-- Nav -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light fs-4 navbar-center ">
 
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">.</span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
